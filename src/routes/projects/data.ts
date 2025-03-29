@@ -1,7 +1,9 @@
 // @ts-nocheck
 
+import thumb21Sausagez from './thumb/21sausagez.webp?enhanced'
 import thumbAnne from './thumb/anne.webp?enhanced'
 import thumbBronkitis from './thumb/bronkitis.webp?enhanced'
+import thumbElPasco from './thumb/elpasco.webp?enhanced'
 import thumbGAM from './thumb/gam.webp?enhanced'
 import thumbHIV from './thumb/hiv.webp?enhanced'
 import thumbIlmiah from './thumb/ilmiah.webp?enhanced'
@@ -34,6 +36,20 @@ type Project = {
 }
 
 export const projectList: Project[] = [
+  {
+    thumb: thumbElPasco,
+    link: Link.FILE,
+    content:
+      'https://el-pasco.vercel.app',
+    alt: 'preview of El Pasco site',
+  },
+  {
+    thumb: thumb21Sausagez,
+    link: Link.FILE,
+    content:
+      'https://crypto-alvaroswdn.vercel.app',
+    alt: 'preview of 21$AUSAGEZ site',
+  },
   {
     thumb: thumbTrigonometri,
     link: Link.FILE,
