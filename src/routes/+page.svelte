@@ -38,10 +38,11 @@
 
 		<enhanced:img
 			class="rounded-lg w-full lg:w-6/7 mt-4 bg-slate-200"
-			src="./scene.webp"
+			src="./scene.webp?w=320;1024;720;560"
 			alt="scene"
 			draggable="false"
 			fetchpriority="high"
+			sizes="(min-width:1024px) 320px, (min-width:960px) 1024px, (min-width:720px) 720px, 560px"
 		/>
 	</section>
 	<section class="flex-3/5">
