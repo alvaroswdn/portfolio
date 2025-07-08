@@ -36,7 +36,13 @@
 			extensive list of skills, seeking to continuously gain new experiences all over the world.
 		</p>
 
-		<enhanced:img class="rounded-lg w-6/7 mt-4" src="./scene.webp" alt="scene" draggable="false" />
+		<enhanced:img
+			class="rounded-lg w-6/7 mt-4 bg-slate-200"
+			src="./scene.webp"
+			alt="scene"
+			draggable="false"
+			fetchpriority="high"
+		/>
 	</section>
 	<section class="flex-3/5">
 		<h2 class="mb-2 text-primary/60 font-medium">Recent Projects</h2>
