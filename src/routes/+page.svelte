@@ -24,7 +24,7 @@
 	</a>
 {/snippet}
 
-<div class="flex gap-36 mt-20">
+<div class="flex flex-col gap-24 mt-8 lg:mt-20 lg:flex-row lg:gap-36">
 	<section class="flex flex-col gap-8 flex-2/5 mt-6">
 		<div>
 			<h1 class="text-4xl font-accent font-semibold">Alvaro R Soewardono</h1>
