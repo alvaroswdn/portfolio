@@ -1,11 +1,5 @@
 <script lang="ts">
 	import LinkIcon from '$lib/icon/Link.svelte';
-	import { onMount } from 'svelte';
-
-	let loadDecoration = $state(false);
-	onMount(() => {
-		loadDecoration = true;
-	});
 </script>
 
 <svelte:head>

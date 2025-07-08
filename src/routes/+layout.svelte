@@ -35,7 +35,7 @@
 			<a href="/" class="flex items-center font-accent text-4xl font-semibold">
 				alvaro<span class="text-accent">.</span>
 			</a>
-			<div class="flex gap-13">
+			<div class="flex gap-8 sm:gap-13">
 				{@render contact('instagram', 'https://www.instagram.com/alvaroswdn', InstagramIcon)}
 				{@render contact('github', 'https://github.com/alvaroswdn', GitHubIcon)}
 				{@render contact('linkedin', 'https://www.linkedin.com/in/alvaro-soewardono', LinkedInIcon)}
