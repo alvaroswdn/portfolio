@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-background: #fbf5f3;
+	--color-primary: #232323;
+	--color-accent: #518190;
+	--font-primary: 'IBM Plex Sans Variable', sans-serif;
+	--font-accent: 'Baskervville Variable', serif;
+}
+
+::selection {
+	color: var(--color-background);
+	background: var(--color-accent);
+}

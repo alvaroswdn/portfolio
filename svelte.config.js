@@ -1,22 +1,19 @@
-import adapter from '@sveltejs/adapter-static';
-import preprocess from 'svelte-preprocess';
+import adapter from '@sveltejs/adapter-static'
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   // Consult https://github.com/sveltejs/svelte-preprocess
   // for more information about preprocessors
-  preprocess: preprocess(),
+  preprocess: vitePreprocess(),
 
   kit: {
     adapter: adapter(),
-    paths: {
-      relative: false,
-    },
     alias: {
       $components: 'src/components',
     },
     csp: {
-      directives : {
+      directives: {
         'default-src': ['none'],
         'img-src': ['self'],
         'style-src': ['self', 'unsafe-inline'],
@@ -31,6 +28,6 @@ const config = {
       },
     },
   },
-};
+}
 
-export default config;
+export default config

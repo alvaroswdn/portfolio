@@ -1,8 +1,8 @@
 {
 	"name": "alvaroswdn",
 	"short_name": "alvaro",
-	"theme_color": "#04888b",
-	"background_color": "#f3e8e2",
+	"theme_color": "#232323",
+	"background_color": "#fbf5f3",
 	"display": "standalone",
 	"scope": "/",
 	"start_url": "/",
