@@ -31,7 +31,7 @@
 
 <div class="bg-background grid text-primary font-primary text-xl h-full min-h-screen">
 	<div class="h-full max-w-6xl m-auto px-8">
-		<header class="flex flex-col gap-3 items-center justify-between py-7 lg:flex-row">
+		<header class="flex flex-col gap-4 items-center justify-between py-7 lg:flex-row">
 			<a href="/" class="flex items-center font-accent text-4xl font-semibold">
 				alvaro<span class="text-accent">.</span>
 			</a>
@@ -47,7 +47,7 @@
 			</div>
 		</header>
 
-		<main class="px-6 pb-32">
+		<main class="px-2 pb-32 lg:px-6">
 			{@render children()}
 		</main>
 	</div>
