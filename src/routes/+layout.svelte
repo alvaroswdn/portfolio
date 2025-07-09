@@ -19,7 +19,7 @@
 	<main class="pb-24">
 		{@render children()}
 	</main>
-	<footer class="text-center text-lg text-primary/90 pb-8 px-10">
+	<footer class="text-center text-lg text-primary/90 pb-8 px-8">
 		&copy; {new Date().getFullYear()} Alvaro Raditya Soewardono. All rights reserved.
 	</footer>
 </div>

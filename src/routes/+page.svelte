@@ -6,7 +6,6 @@
 
 <svelte:head>
 	<title>Home - alvaroswdn</title>
-	<link rel="preload" as="image" href="/icons/logo.webp" />
 </svelte:head>
 
 {#snippet project(title: string, url: string)}
@@ -24,7 +23,7 @@
 <section id="hero" class={`${SECTION_DEFAULTS} gap-16 lg:pt-12 lg:flex-row lg:gap-24`}>
 	<div class="flex flex-col gap-8 flex-4/7 mt-6">
 		<div>
-			<h1 class="text-5xl font-accent font-semibold mb-1">Alvaro R Soewardono</h1>
+			<h1 class="text-4xl lg:text-5xl font-accent font-semibold mb-1">Alvaro R Soewardono</h1>
 			<span class="text-2xl text-accent font-semibold">Fullstack Developer</span>
 		</div>
 
@@ -74,12 +73,14 @@
 			src="./img/lucky_appeals.png"
 			alt="screenshot of the Lucky Network Appeals page"
 			draggable="false"
+			sizes="(min-width:1024px) 540px, (min-width:960px) 1024px, (min-width:720px) 720px, 560px"
 		/>
 		<enhanced:img
 			class="rounded-lg w-full bg-slate-200"
 			src="./img/lucky_store.png"
 			alt="screenshot of the Lucky Network Store page"
 			draggable="false"
+			sizes="(min-width:1024px) 540px, (min-width:960px) 1024px, (min-width:720px) 720px, 560px"
 		/>
 	{/snippet}
 </ProjectSection>
@@ -91,6 +92,7 @@
 			src="./img/iv.png"
 			alt="screenshot of the IV Extraction App"
 			draggable="false"
+			sizes="(min-width:1024px) 1090px, (min-width:960px) 1024px, (min-width:720px) 720px, 560px"
 		/>
 	{/snippet}
 </ProjectSection>
@@ -102,6 +104,7 @@
 			src="./img/el_pasco.png"
 			alt="screenshot of the El Pasco project"
 			draggable="false"
+			sizes="(min-width:1024px) 1090px, (min-width:960px) 1024px, (min-width:720px) 720px, 560px"
 		/>
 	{/snippet}
 </ProjectSection>
@@ -113,6 +116,7 @@
 			src="./img/21sausagez.png"
 			alt="screenshot of the 21$AUSAGEZ project"
 			draggable="false"
+			sizes="(min-width:1024px) 1090px, (min-width:960px) 1024px, (min-width:720px) 720px, 560px"
 		/>
 	{/snippet}
 </ProjectSection>
