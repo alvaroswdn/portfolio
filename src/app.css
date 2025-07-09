@@ -8,6 +8,22 @@
 	--font-accent: 'Baskervville Variable', serif;
 }
 
+html {
+	scroll-padding-top: 4rem;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+
+	@media (width >= 64rem /* 1024px */) {
+		ll-padding-top: 1rem;
+	}
+}
+
+body {
+	background-color: var(--color-background);
+	color: var(--color-primary);
+	font-family: var(--font-primary);
+}
+
 ::selection {
 	color: var(--color-background);
 	background: var(--color-accent);
