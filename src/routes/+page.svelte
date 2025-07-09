@@ -1,5 +1,6 @@
 <script lang="ts">
 	import LinkIcon from '$lib/icon/Link.svelte';
+	import ProjectSection from '$lib/ProjectSection.svelte';
 	const SECTION_DEFAULTS = 'max-w-6xl px-8 m-auto flex flex-col gap-8 not-first:pt-18';
 </script>
 
@@ -34,8 +35,8 @@
 
 		<enhanced:img
 			class="rounded-lg w-full lg:w-6/7 mt-4 bg-slate-200"
-			src="./hero.webp?w=320;1024;720;560"
-			alt="scene"
+			src="./img/hero.webp?w=320;1024;720;560"
+			alt="a random photograph by me"
 			draggable="false"
 			fetchpriority="high"
 			sizes="(min-width:1024px) 320px, (min-width:960px) 1024px, (min-width:720px) 720px, 560px"
@@ -52,12 +53,9 @@
 	</div>
 </section>
 
-<section id="lucky_network" class={`${SECTION_DEFAULTS} lg:pt-36 lg:gap-8`}>
-	<div>
-		<h1 class="relative w-fit text-4xl font-semibold mb-5">
-			Lucky Network <hr class="absolute -bottom-px left-0 w-full border-2 border-amber-400 -z-10" />
-		</h1>
-		<ul class="list-disc pl-6">
+<ProjectSection id="lucky_network" title="Lucky Network" color="border-amber-400">
+	{#snippet description()}
+		<ul class="list-disc pl-6 text-justify *:mb-2">
 			<li>Developed an authentication system with data protection and high performance in mind</li>
 			<li>
 				Improved infrastructure security to prevent access to internal systems from unauthorized
@@ -68,113 +66,53 @@
 				with it
 			</li>
 		</ul>
-	</div>
+	{/snippet}
 
-	<div class="flex flex-col gap-6 lg:flex-row">
+	{#snippet images()}
 		<enhanced:img
 			class="rounded-lg w-full bg-slate-200"
-			src="./lucky_appeals.png"
-			alt="scene"
+			src="./img/lucky_appeals.png"
+			alt="screenshot of the Lucky Network Appeals page"
 			draggable="false"
-			fetchpriority="high"
 		/>
 		<enhanced:img
 			class="rounded-lg w-full bg-slate-200"
-			src="./lucky_store.png"
-			alt="scene"
+			src="./img/lucky_store.png"
+			alt="screenshot of the Lucky Network Store page"
 			draggable="false"
-			fetchpriority="high"
 		/>
-	</div>
-</section>
+	{/snippet}
+</ProjectSection>
 
-<section id="iv" class={`${SECTION_DEFAULTS} lg:pt-36 lg:gap-8`}>
-	<div>
-		<h1 class="relative w-fit text-4xl font-semibold mb-5">
-			IV Extraction App <hr
-				class="absolute -bottom-px left-0 w-full border-2 border-cyan-600 -z-10"
-			/>
-		</h1>
-		<ul class="list-disc pl-6">
-			<!-- <li>Developed an authentication system with data protection and high performance in mind</li>
-			<li>
-				Improved infrastructure security to prevent access to internal systems from unauthorized
-				parties
-			</li>
-			<li>
-				Developed a website to receive donations from players, along with a payment system to go
-				with it
-			</li> -->
-		</ul>
-	</div>
-
-	<div class="flex gap-6">
+<ProjectSection id="iv" title="IV Extraction App" color="border-cyan-600">
+	{#snippet images()}
 		<enhanced:img
-			class="rounded-lg w-full aspect-[8/3] object-top object-cover bg-slate-200"
-			src="./iv.png"
-			alt="scene"
+			class="rounded-xl w-full aspect-[5/2] object-cover bg-slate-200"
+			src="./img/iv.png"
+			alt="screenshot of the IV Extraction App"
 			draggable="false"
-			fetchpriority="high"
 		/>
-	</div>
-</section>
+	{/snippet}
+</ProjectSection>
 
-<section id="el_pasco" class={`${SECTION_DEFAULTS} lg:pt-36 lg:gap-8`}>
-	<div>
-		<h1 class="relative w-fit text-4xl font-semibold mb-5">
-			El Pasco <hr class="absolute -bottom-px left-0 w-full border-2 border-red-800 -z-10" />
-		</h1>
-		<ul class="list-disc pl-6">
-			<!-- <li>Developed an authentication system with data protection and high performance in mind</li>
-			<li>
-				Improved infrastructure security to prevent access to internal systems from unauthorized
-				parties
-			</li>
-			<li>
-				Developed a website to receive donations from players, along with a payment system to go
-				with it
-			</li>
-		</ul> -->
-		</ul>
-	</div>
-
-	<div class="flex gap-6">
+<ProjectSection id="el_pasco" title="El Pasco" color="border-red-800">
+	{#snippet images()}
 		<enhanced:img
-			class="rounded-lg w-full aspect-[8/3] object-top object-cover bg-slate-200"
-			src="./el_pasco.png"
-			alt="scene"
+			class="rounded-xl w-full object-top object-cover bg-slate-200"
+			src="./img/el_pasco.png"
+			alt="screenshot of the El Pasco project"
 			draggable="false"
-			fetchpriority="high"
 		/>
-	</div>
-</section>
+	{/snippet}
+</ProjectSection>
 
-<section id="21sausagez" class={`${SECTION_DEFAULTS} lg:pt-36 lg:gap-8`}>
-	<div>
-		<h1 class="relative w-fit text-4xl font-semibold mb-5">
-			21$AUSAGEZ <hr class="absolute -bottom-px left-0 w-full border-2 border-emerald-600 -z-10" />
-		</h1>
-		<ul class="list-disc pl-6">
-			<!-- <li>Developed an authentication system with data protection and high performance in mind</li>
-			<li>
-				Improved infrastructure security to prevent access to internal systems from unauthorized
-				parties
-			</li>
-			<li>
-				Developed a website to receive donations from players, along with a payment system to go
-				with it
-			</li>
-		</ul> -->
-		</ul>
-	</div>
-
-	<div class="flex gap-6">
+<ProjectSection id="21sausagez" title="21$AUSAGEZ" color="border-emerald-600">
+	{#snippet images()}
 		<enhanced:img
-			class="rounded-lg w-full aspect-[8/3] object-top object-cover bg-slate-200"
-			src="./21sausagez.png"
-			alt="scene"
+			class="rounded-xl w-full aspect-[9/4] object-top object-cover bg-slate-200"
+			src="./img/21sausagez.png"
+			alt="screenshot of the 21$AUSAGEZ project"
 			draggable="false"
-			fetchpriority="high"
 		/>
-	</div>
-</section>
+	{/snippet}
+</ProjectSection>

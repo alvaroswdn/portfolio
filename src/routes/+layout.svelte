@@ -16,7 +16,10 @@
 
 <div class="grid text-xl">
 	<Header />
-	<main class="pb-32">
+	<main class="pb-24">
 		{@render children()}
 	</main>
+	<footer class="text-center text-lg text-primary/90 pb-8 px-10">
+		&copy; {new Date().getFullYear()} Alvaro Raditya Soewardono. All rights reserved.
+	</footer>
 </div>
