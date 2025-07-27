@@ -3,70 +3,68 @@
 /// <reference lib="esnext" />
 /// <reference lib="webworker" />
 
-import { build, files, version } from '$service-worker'
+import { build, files, version } from '$service-worker';
 
-const sw = self as unknown as ServiceWorkerGlobalScope
+const sw = self as unknown as ServiceWorkerGlobalScope;
 
-const CACHE = `cache-${version}`
+const CACHE = `cache-${version}`;
 
-const ASSETS = [...build, ...files]
+const ASSETS = [...build, ...files];
 
 sw.addEventListener('install', (event) => {
-  async function addFilesToCache() {
-    const cache = await caches.open(CACHE)
-    await cache.addAll(ASSETS)
-  }
+	async function addFilesToCache() {
+		const cache = await caches.open(CACHE);
+		await cache.addAll(ASSETS);
+	}
 
-  event.waitUntil(addFilesToCache())
-})
+	event.waitUntil(addFilesToCache());
+});
 
 sw.addEventListener('activate', (event) => {
-  async function deleteOldCaches() {
-    for (const key of await caches.keys()) {
-      if (key !== CACHE) await caches.delete(key)
-    }
-  }
+	async function deleteOldCaches() {
+		for (const key of await caches.keys()) {
+			if (key !== CACHE) await caches.delete(key);
+		}
+	}
 
-  event.waitUntil(deleteOldCaches())
-})
+	event.waitUntil(deleteOldCaches());
+});
 
 sw.addEventListener('fetch', (event) => {
-  if (event.request.method !== 'GET') return
+	if (event.request.method !== 'GET') return;
 
-  async function respond() {
-    const url = new URL(event.request.url)
-    const cache = await caches.open(CACHE)
+	const url = new URL(event.request.url);
+	if (!ASSETS.includes(url.pathname)) return;
 
-    const cacheMatch = await cache.match(event.request)
+	async function respond() {
+		const cache = await caches.open(CACHE);
 
-    if (ASSETS.includes(url.pathname) && cacheMatch) {
-      return cacheMatch
-    }
+		const cacheMatch = await cache.match(event.request);
+		if (cacheMatch) {
+			return cacheMatch;
+		}
 
-    try {
-      const response = await fetch(event.request)
+		try {
+			const response = await fetch(event.request);
 
-      if (response.status === 200) {
-        cache.put(event.request, response.clone())
-      }
+			if (response.status === 200) {
+				cache.put(event.request, response.clone());
+			}
 
-      return response
-    } catch {
-      const lastCacheMatchAttempt = await cache.match(event.request)
+			return response;
+		} catch {
+			const lastCacheMatchAttempt = await cache.match(event.request);
 
-      if (lastCacheMatchAttempt) {
-        return lastCacheMatchAttempt
-      }
+			if (lastCacheMatchAttempt) {
+				return lastCacheMatchAttempt;
+			}
 
-      return new Response(
-        'Something went very wrong. Try force closing and reloading the app.',
-        {
-          status: 408,
-          headers: { 'Content-Type': 'text/html' },
-        },
-      )
-    }
-  }
+			return new Response('Something went very wrong. Try force closing and reloading the app.', {
+				status: 408,
+				headers: { 'Content-Type': 'text/html' }
+			});
+		}
+	}
 
-  event.respondWith(respond())
-})
+	event.respondWith(respond());
+});
