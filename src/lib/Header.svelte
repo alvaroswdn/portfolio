@@ -1,19 +1,18 @@
 <script lang="ts">
-	import EmailIcon from '$lib/icon/Email.svelte';
-	import GitHubIcon from '$lib/icon/GitHub.svelte';
-	import InstagramIcon from '$lib/icon/Instagram.svelte';
-	import LinkedInIcon from '$lib/icon/LinkedIn.svelte';
-	import type { Component } from 'svelte';
+	import EmailIcon from '$lib/icon/email.svg?raw';
+	import GitHubIcon from '$lib/icon/github.svg?raw';
+	import InstagramIcon from '$lib/icon/instagram.svg?raw';
+	import LinkedInIcon from '$lib/icon/linkedin.svg?raw';
 </script>
 
-{#snippet contact(label: string, url: string, Icon: Component)}
+{#snippet contact(label: string, url: string, Icon: string)}
 	<a
 		class="hover:text-accent transition-colors duration-400 ease-out"
 		href={url}
 		target="_blank"
 		aria-label={label}
 	>
-		<Icon />
+		{@html Icon}
 	</a>
 {/snippet}
 

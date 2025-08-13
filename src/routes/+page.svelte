@@ -1,5 +1,5 @@
 <script lang="ts">
-	import LinkIcon from '$lib/icon/Link.svelte';
+	import LinkIcon from '$lib/icon/link.svg?raw';
 	import ProjectSection from '$lib/ProjectSection.svelte';
 	const SECTION_DEFAULTS = 'max-w-6xl px-8 m-auto flex flex-col gap-8 not-first:pt-18';
 </script>
@@ -15,7 +15,7 @@
 			class="group flex items-center justify-between px-5 py-4 hover:text-accent hover:scale-[102%] transition-all duration-400 ease-out lg:px-7 lg:py-6"
 		>
 			{title}
-			<LinkIcon />
+			{@html LinkIcon}
 		</a>
 	</div>
 {/snippet}
