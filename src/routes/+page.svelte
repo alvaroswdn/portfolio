@@ -1,4 +1,5 @@
 <script lang="ts">
+	import DownloadIcon from '$lib/icon/download.svg?raw';
 	import LinkIcon from '$lib/icon/link.svg?raw';
 	import ProjectSection from '$lib/ProjectSection.svelte';
 	const SECTION_DEFAULTS = 'max-w-6xl px-8 m-auto flex flex-col gap-8 not-first:pt-18';
@@ -45,14 +46,24 @@
 		<h2 class="mb-2 text-primary/80 font-medium">Recent Projects</h2>
 		<div class="grid outline outline-primary divide-y divide-primary">
 			{@render project('Lucky Network', '#lucky_network')}
+			{@render project('AeroBASE', '#aerobase')}
 			{@render project('IV Extraction App', '#iv')}
-			{@render project('El Pasco', '#el_pasco')}
 			{@render project('21$AUSAGEZ', '#21sausagez')}
 		</div>
+		<a href="/cv.pdf" download class="flex w-full items-center justify-between mt-8 lg:mt-10 px-5 py-4 cursor-pointer bg-accent text-white hover:scale-[102%] transition-all duration-400 ease-out lg:px-7 lg:py-6">
+			Download CV
+			{@html DownloadIcon}
+		</a>
 	</div>
 </section>
 
-<ProjectSection id="lucky_network" title="Lucky Network" color="border-amber-400">
+<ProjectSection id="lucky_network" color="border-amber-400">
+	{#snippet title()}
+		<a href="https://www.luckynetwork.net/" target="_blank">
+			Lucky Network &#x2197;
+		</a>
+	{/snippet}
+
 	{#snippet description()}
 		<ul class="list-disc pl-6 text-justify *:mb-2">
 			<li>Developed an authentication system with data protection and high performance in mind</li>
@@ -85,24 +96,45 @@
 	{/snippet}
 </ProjectSection>
 
-<ProjectSection id="iv" title="IV Extraction App" color="border-cyan-600">
+<ProjectSection id="aerobase" color="border-cyan-600">
+	{#snippet title()}
+		<a href="https://aerobase.id" target="_blank">
+			AeroBASE &#x2197;
+		</a>
+	{/snippet}
+
+	{#snippet description()}
+		<ul class="list-disc pl-6 text-justify *:mb-2">
+			<li>Developed a drone control system utilizing PID for stabilization and navigation</li>
+			<li>Developed team website with Astro for team information and competition updates</li>
+			<li>Created software documentation and tutorials for future team members</li>
+		</ul>
+	{/snippet}
+
+	{#snippet images()}
+		<enhanced:img
+			class="rounded-lg w-full bg-slate-200"
+			src="./img/aerobase.png"
+			alt="screenshot of the AeroBASE page"
+			draggable="false"
+			sizes="(min-width:1024px) 540px, (min-width:960px) 1024px, (min-width:720px) 720px, 560px"
+		/>
+		<enhanced:img
+			class="rounded-lg w-full bg-slate-200"
+			src="./img/aerobase2.png"
+			alt="continued screenshot of the AeroBASE page"
+			draggable="false"
+			sizes="(min-width:1024px) 540px, (min-width:960px) 1024px, (min-width:720px) 720px, 560px"
+		/>
+	{/snippet}
+</ProjectSection>
+
+<ProjectSection id="iv" title="IV Extraction App" color="border-red-800">
 	{#snippet images()}
 		<enhanced:img
 			class="rounded-xl w-full aspect-[5/2] object-cover bg-slate-200"
 			src="./img/iv.png"
 			alt="screenshot of the IV Extraction App"
-			draggable="false"
-			sizes="(min-width:1024px) 1090px, (min-width:960px) 1024px, (min-width:720px) 720px, 560px"
-		/>
-	{/snippet}
-</ProjectSection>
-
-<ProjectSection id="el_pasco" title="El Pasco" color="border-red-800">
-	{#snippet images()}
-		<enhanced:img
-			class="rounded-xl w-full object-top object-cover bg-slate-200"
-			src="./img/el_pasco.png"
-			alt="screenshot of the El Pasco project"
 			draggable="false"
 			sizes="(min-width:1024px) 1090px, (min-width:960px) 1024px, (min-width:720px) 720px, 560px"
 		/>

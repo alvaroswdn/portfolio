@@ -3,7 +3,7 @@
 
 	type Props = {
 		id: string;
-		title: string;
+		title: string | Snippet;
 		color: string;
 		description?: Snippet;
 		images: Snippet;
@@ -14,7 +14,11 @@
 
 <section {id} class="max-w-6xl px-8 pt-16 m-auto lg:pt-36">
 	<h1 class="relative w-fit text-3xl lg:text-4xl font-semibold mb-6">
-		{title}
+		{#if typeof title === 'string'}
+			{title}
+		{:else}
+			{@render title()}
+		{/if}
 		<hr class={`absolute -bottom-px left-0 w-full border-2 ${color} -z-10`} />
 	</h1>
 	<div class="flex flex-col gap-8 lg:gap-10">
