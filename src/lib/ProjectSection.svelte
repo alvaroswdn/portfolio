@@ -12,8 +12,8 @@
 	let { id, title, color, description, images }: Props = $props();
 </script>
 
-<section {id} class="max-w-6xl px-8 pt-16 m-auto lg:pt-36">
-	<h1 class="relative w-fit text-3xl lg:text-4xl font-semibold mb-6">
+<div {id} class="max-w-6xl px-8 m-auto">
+	<h1 class="relative w-fit text-2xl lg:text-4xl font-semibold mb-6">
 		{#if typeof title === 'string'}
 			{title}
 		{:else}
@@ -27,4 +27,4 @@
 			{@render images()}
 		</div>
 	</div>
-</section>
+</div>
