@@ -58,7 +58,8 @@
 	>
 		<enhanced:img
 			data-speed="0.95"
-			class="absolute -bottom-14 right-0 w-auto h-12/11 z-10 {humanReady && sparklesReady
+			class="absolute -bottom-8 sm:-bottom-14 -right-8 sm:right-0 w-auto h-12/11 z-10 {humanReady &&
+			sparklesReady
 				? 'opacity-100'
 				: 'opacity-0'}"
 			src="./img/human.png"
@@ -70,7 +71,8 @@
 		/>
 		<enhanced:img
 			data-speed="0.96"
-			class="absolute -bottom-14 right-0 w-auto h-12/11 z-10 {humanReady && sparklesReady
+			class="absolute -bottom-8 sm:-bottom-14 -right-8 sm:right-0 w-auto h-12/11 z-10 {humanReady &&
+			sparklesReady
 				? 'opacity-100'
 				: 'opacity-0'}"
 			src="./img/sparkles.png"
