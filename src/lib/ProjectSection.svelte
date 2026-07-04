@@ -14,7 +14,7 @@
 
 <div {id}>
 	<div class="max-w-6xl m-auto px-6 mb-8">
-		<h1 class="relative w-fit text-2xl lg:text-4xl font-semibold mb-6">
+		<h1 class="relative w-fit text-3xl lg:text-4xl font-semibold mb-6">
 			{#if typeof title === 'string'}
 				{title}
 			{:else}
