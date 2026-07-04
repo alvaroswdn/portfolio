@@ -7,5 +7,12 @@ export const handle: Handle = async ({ event, resolve }) => {
 		preload: ({ type, path }) => type === 'font' && fonts.some((font) => path.includes(font))
 	});
 
+	if (response.status === 404) {
+		return new Response(null, {
+			status: 303,
+			headers: { location: '/' }
+		});
+	}
+
 	return response;
 };

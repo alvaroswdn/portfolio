@@ -23,7 +23,7 @@
 {/snippet}
 
 <header
-	class="sticky top-0 mt-4 sm:mt-2 px-8 pt-2 pb-3 sm:pt-4 sm:pb-5 bg-background z-10 transition-all duration-300 ease-in-out border-b border-primary/0 {!visible &&
+	class="fixed top-0 w-full px-8 pt-2 pb-3 sm:pt-4 sm:pb-5 bg-background z-10 transition-all duration-300 ease-in-out border-b border-primary/0 {!visible &&
 		'-translate-y-full'} {lastScrollY !== 0 && 'border-primary/20!'}"
 >
 	<div class="flex flex-col gap-4 items-center justify-between max-w-7xl m-auto sm:flex-row">
@@ -58,16 +58,8 @@
 </div>
 
 <svelte:window
-	on:scroll={() => {
-		const scrollY = window.scrollY;
-
-		if (scrollY > lastScrollY) {
-			// scrolling down
-			visible = false;
-		} else {
-			visible = true;
-		}
-
-		lastScrollY = scrollY;
+	onscroll={() => {
+		visible = window.scrollY <= lastScrollY || window.scrollY < 100;
+		lastScrollY = window.scrollY;
 	}}
 />

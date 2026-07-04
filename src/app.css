@@ -8,9 +8,19 @@
 	--font-accent: 'Baskervville Variable', serif;
 }
 
+@utility scrollbar-hidden {
+	& {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
 html {
 	scroll-padding-top: 4rem;
-	scroll-behavior: smooth;
 	overflow-x: hidden;
 
 	@media (width >= 64rem /* 1024px */) {

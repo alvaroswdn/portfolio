@@ -1,7 +1,21 @@
 <script lang="ts">
 	import { asset } from '$app/paths';
 	import DownloadIcon from '$lib/icon/download.svelte';
+	import LinkIcon from '$lib/icon/link.svelte';
 	import ProjectSection from '$lib/ProjectSection.svelte';
+
+	import { gsap } from 'gsap';
+	import { ScrollSmoother } from 'gsap/ScrollSmoother';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+	$effect(() => {
+		gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+		ScrollSmoother.create({
+			smooth: 1,
+			effects: true
+		});
+	});
 </script>
 
 <svelte:head>
@@ -35,17 +49,21 @@
 		</div>
 	</div>
 
-	<enhanced:img
-		class="sm:rounded-lg w-full max-h-96 object-cover object-center bg-slate-200"
-		src="./img/hero.webp?w=1536;1024;720;560"
-		alt="a random photograph by me"
-		draggable="false"
-		fetchpriority="high"
-		sizes="(min-width:1024px) 1536px, (min-width:960px) 1024px, (min-width:720px) 720px, 560px"
-	/>
+	<div
+		class="relative sm:rounded-sm flex items-center w-full aspect-10/5 sm:aspect-10/3 overflow-hidden bg-slate-200"
+	>
+		<enhanced:img
+			data-speed="0.97"
+			src="./img/hero.webp"
+			alt="a random photograph by me"
+			draggable="false"
+			fetchpriority="high"
+			sizes="min(1536px, 100vw)"
+		/>
+	</div>
 </section>
 
-<hr class="mt-16 lg:mt-28 max-w-6xl mx-auto text-primary/30" />
+<hr class="mt-16 lg:mt-28 max-w-6xl mx-auto text-primary/20" />
 
 <section id="projects" class="mt-8 lg:mt-14">
 	<h1 class="mx-auto w-fit font-accent font-semibold text-4xl lg:text-5xl mb-12 lg:mb-16">
@@ -54,7 +72,9 @@
 	<div class="grid gap-16 lg:gap-36">
 		<ProjectSection id="aerobase" color="border-cyan-600">
 			{#snippet title()}
-				<a href="https://aerobase.id" target="_blank"> AeroBASE &#x2197; </a>
+				<a class="flex items-center gap-1.5" href="https://aerobase.id" target="_blank">
+					AeroBASE <LinkIcon />
+				</a>
 			{/snippet}
 
 			{#snippet description()}
@@ -67,25 +87,31 @@
 
 			{#snippet images()}
 				<enhanced:img
-					class="rounded-lg w-full bg-slate-200"
 					src="./img/aerobase.png"
-					alt="screenshot of the AeroBASE page"
+					alt="screenshot of the AeroBASE website landing page"
 					draggable="false"
-					sizes="(min-width:1024px) 540px, (min-width:960px) 1024px, (min-width:720px) 720px, 560px"
+					sizes="min(560px, 90vw)"
 				/>
 				<enhanced:img
-					class="rounded-lg w-full bg-slate-200"
 					src="./img/aerobase2.png"
-					alt="continued screenshot of the AeroBASE page"
+					alt="screenshot of AeroBASE website about page"
 					draggable="false"
-					sizes="(min-width:1024px) 540px, (min-width:960px) 1024px, (min-width:720px) 720px, 560px"
+					sizes="min(560px, 90vw)"
+				/>
+				<enhanced:img
+					src="./img/aerobase3.png"
+					alt="screenshot of the AeroBASE website news page"
+					draggable="false"
+					sizes="min(560px, 90vw)"
 				/>
 			{/snippet}
 		</ProjectSection>
 
 		<ProjectSection id="lucky_network" color="border-amber-400">
 			{#snippet title()}
-				<a href="https://www.luckynetwork.net/" target="_blank"> Lucky Network &#x2197; </a>
+				<a class="flex items-center gap-1.5" href="https://www.luckynetwork.net/" target="_blank">
+					Lucky Network <LinkIcon />
+				</a>
 			{/snippet}
 
 			{#snippet description()}
@@ -106,18 +132,16 @@
 
 			{#snippet images()}
 				<enhanced:img
-					class="rounded-lg w-full bg-slate-200"
 					src="./img/lucky_appeals.png"
 					alt="screenshot of the Lucky Network Appeals page"
 					draggable="false"
-					sizes="(min-width:1024px) 540px, (min-width:960px) 1024px, (min-width:720px) 720px, 560px"
+					sizes="min(560px, 90vw)"
 				/>
 				<enhanced:img
-					class="rounded-lg w-full bg-slate-200"
 					src="./img/lucky_store.png"
 					alt="screenshot of the Lucky Network Store page"
 					draggable="false"
-					sizes="(min-width:1024px) 540px, (min-width:960px) 1024px, (min-width:720px) 720px, 560px"
+					sizes="min(560px, 90vw)"
 				/>
 			{/snippet}
 		</ProjectSection>
