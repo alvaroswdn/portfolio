@@ -8,6 +8,10 @@
 	import { ScrollSmoother } from 'gsap/ScrollSmoother';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+	let humanReady = $state(false);
+	let sparklesReady = $state(false);
+	let backgroundReady = $state(false);
+
 	$effect(() => {
 		gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -50,15 +54,49 @@
 	</div>
 
 	<div
-		class="relative sm:rounded-sm flex items-center w-full aspect-10/5 sm:aspect-10/3 overflow-hidden bg-slate-200"
+		class="relative z-0 sm:rounded-sm flex items-center w-full aspect-10/5 sm:aspect-10/3 overflow-hidden bg-slate-200 **:transition-opacity **:duration-600 **:ease-in-out"
 	>
 		<enhanced:img
+			data-speed="0.95"
+			class="absolute -bottom-14 right-0 w-auto h-12/11 z-10 {humanReady && sparklesReady
+				? 'opacity-100'
+				: 'opacity-0'}"
+			src="./img/human.png"
+			alt="me from behind"
+			draggable="false"
+			fetchpriority="high"
+			sizes="min(360px, 40vw)"
+			onload={() => (humanReady = true)}
+		/>
+		<enhanced:img
+			data-speed="0.96"
+			class="absolute -bottom-14 right-0 w-auto h-12/11 z-10 {humanReady && sparklesReady
+				? 'opacity-100'
+				: 'opacity-0'}"
+			src="./img/sparkles.png"
+			alt="sparkles around me"
+			draggable="false"
+			fetchpriority="high"
+			sizes="min(360px, 40vw)"
+			onload={() => (sparklesReady = true)}
+		/>
+		<enhanced:img
 			data-speed="0.97"
+			class={backgroundReady ? 'opacity-100' : 'opacity-0'}
 			src="./img/hero.webp"
 			alt="a random photograph by me"
 			draggable="false"
 			fetchpriority="high"
-			sizes="min(1536px, 100vw)"
+			sizes="min(1280px, 100vw)"
+			onload={() => (backgroundReady = true)}
+		/>
+		<enhanced:img
+			data-speed="0.97"
+			class="-z-10 absolute inset-0 top-1/2 -translate-y-1/2 w-full h-auto"
+			src="./img/hero.webp?w=144&blur=12"
+			alt="a blurred photograph by me"
+			draggable="false"
+			fetchpriority="high"
 		/>
 	</div>
 </section>
