@@ -15,7 +15,7 @@ const config = {
 		csp: {
 			directives: {
 				'default-src': ['none'],
-				'img-src': ['self'],
+				'img-src': ['self', 'data:'],
 				'style-src': ['self', 'unsafe-inline'],
 				'script-src': ['self', 'https://static.cloudflareinsights.com', 'unsafe-inline'],
 				'connect-src': ['self', 'https://cloudflareinsights.com'],
