@@ -19,13 +19,30 @@
 	}
 }
 
-html {
-	scroll-padding-top: 4rem;
-	overflow-x: hidden;
-
-	@media (width >= 64rem /* 1024px */) {
-		scroll-padding-top: 1rem;
+@keyframes rotate {
+	from {
+		filter: blur(0px);
+		transform: rotate(360deg);
 	}
+	to {
+		filter: blur(0px);
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes rotate-reverse {
+	from {
+		filter: blur(0px);
+		transform: rotate(0deg);
+	}
+	to {
+		filter: blur(0px);
+		transform: rotate(360deg);
+	}
+}
+
+html {
+	overflow-x: hidden;
 }
 
 body {

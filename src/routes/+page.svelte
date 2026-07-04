@@ -8,9 +8,30 @@
 	import { ScrollSmoother } from 'gsap/ScrollSmoother';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+	import cppImage from './img/hero/cplusplus-128px.png';
+	import goImage from './img/hero/go-128px.png';
+	import javaImage from './img/hero/java-128px.png';
+	import nodejsImage from './img/hero/nodejs-128px.png';
+	import pythonImage from './img/hero/python-128px.png';
+	import rosImage from './img/hero/ros-128px.png';
+	import tailwindCssImage from './img/hero/tailwind-css-128px.png';
+	import typescriptImage from './img/hero/typescript-128px.png';
+
 	let humanReady = $state(false);
 	let sparklesReady = $state(false);
 	let backgroundReady = $state(false);
+
+	let imgs = [
+		{ src: goImage, alt: 'Go programming language' },
+		{ src: javaImage, alt: 'Java programming language' },
+		{ src: nodejsImage, alt: 'Node.js runtime' },
+		{ src: pythonImage, alt: 'Python programming language' },
+		{ src: tailwindCssImage, alt: 'Tailwind CSS framework' },
+		{ src: typescriptImage, alt: 'TypeScript programming language' },
+		{ src: rosImage, alt: 'ROS2 (Robot Operating System)' },
+		{ src: cppImage, alt: 'C++ programming language' }
+	];
+	let hasMid = 0;
 
 	$effect(() => {
 		gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -54,12 +75,47 @@
 	</div>
 
 	<div
-		class="relative z-0 sm:rounded-sm flex items-center w-full aspect-10/5 sm:aspect-10/3 overflow-hidden bg-slate-200 **:transition-opacity **:duration-600 **:ease-in-out"
+		class="relative select-none z-0 sm:rounded-sm flex items-center w-full aspect-10/5 sm:aspect-10/3 overflow-hidden bg-slate-200 **:transition-opacity **:duration-600 **:ease-in-out"
 	>
+		<div
+			data-speed="0.96"
+			class="absolute z-10 right-0 sm:right-1/64 top-1/10 sm:top-1/16 aspect-square w-1/2 sm:w-1/3 scale-120 flex items-center justify-center will-change-transform animate-[rotate_30s_linear_infinite] delay-400 {humanReady &&
+			sparklesReady &&
+			backgroundReady
+				? 'opacity-100'
+				: 'opacity-0'}"
+			style="--m: {imgs.length - hasMid}"
+		>
+			{#each imgs as img, i (img.src)}
+				<div
+					class="rotating-el absolute w-1/7 aspect-square opacity-80 sm:opacity-10 brightness-0 blur-lg"
+					style={i - hasMid >= 0 ? `--i: ${i}` : null}
+				>
+					<enhanced:img
+						src={img.src}
+						alt={img.alt}
+						draggable="false"
+						class="animate-[rotate-reverse_30s_linear_infinite] will-change-transform"
+					/>
+				</div>
+				<div
+					class="rotating-el absolute w-1/7 aspect-square opacity-60 brightness-0 invert z-10"
+					style={i - hasMid >= 0 ? `--i: ${i}` : null}
+				>
+					<enhanced:img
+						src={img.src}
+						alt={img.alt}
+						draggable="false"
+						class="animate-[rotate-reverse_30s_linear_infinite] will-change-transform"
+					/>
+				</div>
+			{/each}
+		</div>
 		<enhanced:img
 			data-speed="0.95"
-			class="absolute -bottom-8 sm:-bottom-14 -right-8 sm:right-0 w-auto h-12/11 z-10 {humanReady &&
-			sparklesReady
+			class="absolute -bottom-8 sm:-bottom-14 -right-8 sm:right-0 w-auto h-12/11 z-30 delay-100 {humanReady &&
+			sparklesReady &&
+			backgroundReady
 				? 'opacity-100'
 				: 'opacity-0'}"
 			src="./img/human.png"
@@ -71,8 +127,9 @@
 		/>
 		<enhanced:img
 			data-speed="0.96"
-			class="absolute -bottom-8 sm:-bottom-14 -right-8 sm:right-0 w-auto h-12/11 z-10 {humanReady &&
-			sparklesReady
+			class="absolute -bottom-8 sm:-bottom-14 -right-8 sm:right-0 w-auto h-12/11 z-20 delay-200 {humanReady &&
+			sparklesReady &&
+			backgroundReady
 				? 'opacity-100'
 				: 'opacity-0'}"
 			src="./img/sparkles.png"
@@ -187,3 +244,15 @@
 		</ProjectSection>
 	</div>
 </section>
+
+<style>
+	.rotating-el {
+		position: absolute;
+		--angle: calc(360deg / var(--m) * var(--i));
+		--x: calc(50% + 50% * cos(var(--angle) - 90deg));
+		--y: calc(50% + 50% * sin(var(--angle) - 90deg));
+		left: var(--x);
+		top: var(--y);
+		transform: translate(-50%, -50%);
+	}
+</style>
