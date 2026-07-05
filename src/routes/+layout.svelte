@@ -4,13 +4,20 @@
 	import '@fontsource-variable/ibm-plex-sans';
 	import '../app.css';
 
+	import { gsap } from 'gsap';
+	import { ScrollSmoother } from 'gsap/ScrollSmoother';
+	import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 	const { children } = $props();
+
+	gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 </script>
 
 <div class="grid text-xl">
 	<Header />
 	<div id="smooth-wrapper">
-		<div id="smooth-content" class="pt-22">
+		<div id="smooth-content" class="pt-18 sm:pt-22">
 			<main class="mb-24">
 				{@render children()}
 			</main>

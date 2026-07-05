@@ -35,11 +35,6 @@
 
 	$effect(() => {
 		gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
-		ScrollSmoother.create({
-			smooth: 1,
-			effects: true
-		});
 	});
 </script>
 
@@ -47,7 +42,7 @@
 	<title>Home - alvaroswdn</title>
 </svelte:head>
 
-<section id="hero" class="grid gap-14 max-w-7xl mx-auto lg:mt-12 sm:px-4">
+<section id="hero" class="grid gap-16 max-w-7xl mx-auto sm:mt-8 sm:px-4">
 	<div
 		class="w-full flex flex-col gap-12 justify-between max-w-6xl mx-auto px-8 not-first:pt-18 lg:flex-row"
 	>
@@ -79,7 +74,7 @@
 	>
 		<div
 			data-speed="0.96"
-			class="absolute z-10 right-0 sm:right-1/64 top-1/10 sm:top-1/16 aspect-square w-1/2 sm:w-1/3 scale-120 flex items-center justify-center will-change-transform animate-[rotate_30s_linear_infinite] delay-400 {humanReady &&
+			class="absolute z-10 right-0 sm:right-1/64 top-1/10 sm:top-1/16 aspect-square w-1/2 sm:w-1/3 scale-120 flex items-center justify-center will-change-transform animate-[rotate_30s_linear_infinite] delay-200 {humanReady &&
 			sparklesReady &&
 			backgroundReady
 				? 'opacity-100'
@@ -87,17 +82,6 @@
 			style="--m: {imgs.length - hasMid}"
 		>
 			{#each imgs as img, i (img.src)}
-				<div
-					class="rotating-el absolute w-1/7 aspect-square opacity-80 sm:opacity-10 brightness-0 blur-lg"
-					style={i - hasMid >= 0 ? `--i: ${i}` : null}
-				>
-					<enhanced:img
-						src={img.src}
-						alt={img.alt}
-						draggable="false"
-						class="animate-[rotate-reverse_30s_linear_infinite] will-change-transform"
-					/>
-				</div>
 				<div
 					class="rotating-el absolute w-1/7 aspect-square opacity-60 brightness-0 invert z-10"
 					style={i - hasMid >= 0 ? `--i: ${i}` : null}
@@ -113,9 +97,8 @@
 		</div>
 		<enhanced:img
 			data-speed="0.95"
-			class="absolute -bottom-8 sm:-bottom-14 -right-8 sm:right-0 w-auto h-12/11 z-30 delay-100 {humanReady &&
-			sparklesReady &&
-			backgroundReady
+			class="absolute -bottom-8 sm:-bottom-14 -right-8 sm:right-0 w-auto h-12/11 z-30 {humanReady &&
+			sparklesReady
 				? 'opacity-100'
 				: 'opacity-0'}"
 			src="./img/human.png"
@@ -127,9 +110,8 @@
 		/>
 		<enhanced:img
 			data-speed="0.96"
-			class="absolute -bottom-8 sm:-bottom-14 -right-8 sm:right-0 w-auto h-12/11 z-20 delay-200 {humanReady &&
-			sparklesReady &&
-			backgroundReady
+			class="absolute -bottom-8 sm:-bottom-14 -right-8 sm:right-0 w-auto h-12/11 z-20 {humanReady &&
+			sparklesReady
 				? 'opacity-100'
 				: 'opacity-0'}"
 			src="./img/sparkles.png"
