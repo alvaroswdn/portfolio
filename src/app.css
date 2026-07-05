@@ -56,3 +56,13 @@ body {
 	color: var(--color-background);
 	background: var(--color-accent);
 }
+
+.rotating-el {
+	position: absolute;
+	--angle: calc(360deg / var(--m) * var(--i));
+	--x: calc(50% + 50% * cos(var(--angle) - 90deg));
+	--y: calc(50% + 50% * sin(var(--angle) - 90deg));
+	left: var(--x);
+	top: var(--y);
+	transform: translate(-50%, -50%);
+}
