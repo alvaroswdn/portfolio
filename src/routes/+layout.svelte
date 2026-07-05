@@ -1,7 +1,5 @@
 <script lang="ts">
 	import Header from '$lib/Header.svelte';
-	import '@fontsource-variable/baskervville';
-	import '@fontsource-variable/ibm-plex-sans';
 	import '../app.css';
 
 	import { gsap } from 'gsap';

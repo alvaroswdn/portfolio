@@ -2,6 +2,8 @@
 	import { asset } from '$app/paths';
 	import DownloadIcon from '$lib/icon/download.svelte';
 
+	import heroBlurImage from './img/hero_blur.jpeg';
+
 	import cppImage from './img/hero/cplusplus-128px.png';
 	import goImage from './img/hero/go-128px.png';
 	import javaImage from './img/hero/java-128px.png';
@@ -121,7 +123,7 @@
 		<enhanced:img
 			data-speed="0.97"
 			class="-z-10 absolute inset-0 top-1/2 -translate-y-1/2 w-full h-auto"
-			src="./img/hero.webp?w=144&blur=12"
+			src={heroBlurImage}
 			alt="a blurred photograph by me"
 			draggable="false"
 			fetchpriority="high"
