@@ -7,9 +7,13 @@
 	import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+	import { dev } from '$app/environment';
+	import { injectAnalytics } from '@vercel/analytics/sveltekit';
+
 	const { children } = $props();
 
 	gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+	injectAnalytics({ mode: dev ? 'development' : 'production' });
 </script>
 
 <div class="grid text-xl">
