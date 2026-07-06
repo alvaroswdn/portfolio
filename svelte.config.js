@@ -17,7 +17,7 @@ const config = {
 				'default-src': ['none'],
 				'img-src': ['self', 'data:'],
 				'style-src': ['self', 'unsafe-inline'],
-				'script-src': ['self', 'https://static.cloudflareinsights.com', 'unsafe-inline'],
+				'script-src': ['self', 'https://static.cloudflareinsights.com', 'https://va.vercel-scripts.com', 'unsafe-inline'],
 				'connect-src': ['self', 'https://cloudflareinsights.com'],
 				'font-src': ['self'],
 				'manifest-src': ['self'],

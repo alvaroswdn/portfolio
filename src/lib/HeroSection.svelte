@@ -63,6 +63,7 @@
 	>
 		<div
 			data-speed="0.96"
+			id="skills"
 			class="absolute z-10 right-0 sm:right-1/64 top-1/10 sm:top-1/16 aspect-square w-1/2 sm:w-1/3 scale-120 flex items-center justify-center will-change-transform animate-[rotate_30s_linear_infinite] delay-200 {humanReady &&
 			sparklesReady &&
 			backgroundReady
@@ -72,7 +73,7 @@
 		>
 			{#each imgs as img, i (img.src)}
 				<div
-					class="rotating-el absolute w-1/7 aspect-square opacity-60 brightness-0 invert z-10"
+					class="rotating-el absolute w-1/7 aspect-square opacity-60 brightness-0 invert z-20"
 					style={i - hasMid >= 0 ? `--i: ${i}` : null}
 				>
 					<enhanced:img
@@ -86,7 +87,8 @@
 		</div>
 		<enhanced:img
 			data-speed="0.95"
-			class="absolute -bottom-8 sm:-bottom-14 -right-8 sm:right-0 w-auto h-12/11 z-30 {humanReady &&
+			id="human"
+			class="absolute -bottom-8 sm:-bottom-14 -right-8 sm:right-0 w-auto h-12/11 z-40 {humanReady &&
 			sparklesReady
 				? 'opacity-100'
 				: 'opacity-0'}"
@@ -99,7 +101,8 @@
 		/>
 		<enhanced:img
 			data-speed="0.96"
-			class="absolute -bottom-8 sm:-bottom-14 -right-8 sm:right-0 w-auto h-12/11 z-20 {humanReady &&
+			id="sparkles"
+			class="absolute -bottom-8 sm:-bottom-14 -right-8 sm:right-0 w-auto h-12/11 z-30 {humanReady &&
 			sparklesReady
 				? 'opacity-100'
 				: 'opacity-0'}"
@@ -112,7 +115,6 @@
 		/>
 		<enhanced:img
 			data-speed="0.97"
-			class={backgroundReady ? 'opacity-100' : 'opacity-0'}
 			src="./img/hero.webp"
 			alt="a random photograph by me"
 			draggable="false"
@@ -122,7 +124,10 @@
 		/>
 		<enhanced:img
 			data-speed="0.97"
-			class="-z-10 absolute inset-0 top-1/2 -translate-y-1/2 w-full h-auto"
+			id="blur"
+			class="z-10 absolute inset-0 top-1/2 -translate-y-1/2 w-full h-auto {backgroundReady
+				? 'opacity-0'
+				: 'opacity-100'}"
 			src={heroBlurImage}
 			alt="a blurred photograph by me"
 			draggable="false"
@@ -130,3 +135,23 @@
 		/>
 	</div>
 </section>
+
+<noscript>
+	<style>
+		#human {
+			opacity: 1 !important;
+		}
+
+		#sparkles {
+			opacity: 1 !important;
+		}
+
+		#skills {
+			opacity: 1 !important;
+		}
+
+		#blur {
+			opacity: 0 !important;
+		}
+	</style>
+</noscript>
