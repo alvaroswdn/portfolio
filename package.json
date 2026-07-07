@@ -16,11 +16,11 @@
 	"devDependencies": {
 		"@eslint/compat": "^2.1.0",
 		"@eslint/js": "^10.0.1",
-		"@fontsource-variable/ibm-plex-sans": "^5.2.8",
 		"@fontsource/baskervville": "^5.2.9",
+		"@fontsource/ibm-plex-sans": "^5.2.8",
 		"@sveltejs/adapter-static": "^3.0.10",
 		"@sveltejs/enhanced-img": "^0.11.0",
-		"@sveltejs/kit": "^2.69.0",
+		"@sveltejs/kit": "^2.69.1",
 		"@sveltejs/vite-plugin-svelte": "^7.1.2",
 		"@tailwindcss/vite": "^4.3.2",
 		"@vercel/analytics": "^2.0.1",

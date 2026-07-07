@@ -17,7 +17,7 @@ export default defineConfig({
 		tailwindcss(),
 		FontaineTransform.vite({
 			fallbacks: {
-				'IBM Plex Sans Variable': [
+				'IBM Plex Sans': [
 					'-apple-system',
 					'BlinkMacSystemFont',
 					'Segoe UI',
