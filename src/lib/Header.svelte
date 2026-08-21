@@ -12,7 +12,7 @@
 
 	$effect(() => {
 		const header = document.getElementById('header')!;
-		const socialHeader = document.getElementById('social-header')!;
+		const connectBar = document.getElementById('connect-bar')!;
 
 		ScrollSmoother.create({
 			smooth: 1.6,
@@ -22,10 +22,10 @@
 				const progress = self.progress * window.innerHeight;
 				if (progress <= lastScrollY || progress < 100) {
 					header.classList.remove('-translate-y-full');
-					socialHeader.classList.add('translate-y-full');
+					connectBar.classList.add('translate-y-full');
 				} else {
 					header.classList.add('-translate-y-full');
-					socialHeader.classList.remove('translate-y-full');
+					connectBar.classList.remove('translate-y-full');
 				}
 
 				if (progress <= 10) {
@@ -77,7 +77,7 @@
 </header>
 
 <div
-	id="social-header"
+	id="connect-bar"
 	class="fixed w-full bottom-0 flex items-center justify-around px-8 pt-4 pb-5 bg-background z-10 transition-all duration-300 ease-in-out sm:hidden border-t border border-primary/20 translate-y-full"
 >
 	{@render contact('instagram', 'https://www.instagram.com/alvaroswdn', InstagramIcon)}
