@@ -125,7 +125,7 @@
 		<enhanced:img
 			data-speed="0.97"
 			id="blur"
-			class="z-10 absolute inset-0 top-1/2 -translate-y-1/2 w-full h-auto {backgroundReady
+			class="z-10 absolute inset-0 top-1/2 -translate-y-1/2 w-full h-auto min-h-full {backgroundReady
 				? 'opacity-0'
 				: 'opacity-100'}"
 			src={heroBlurImage}

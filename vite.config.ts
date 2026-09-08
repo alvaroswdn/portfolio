@@ -9,7 +9,8 @@ export default defineConfig({
 		transformer: 'lightningcss'
 	},
 	build: {
-		cssMinify: 'lightningcss'
+		cssMinify: 'lightningcss',
+		assetsInlineLimit: 100000000
 	},
 	plugins: [
 		enhancedImages(),

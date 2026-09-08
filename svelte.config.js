@@ -7,6 +7,9 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
+		output: {
+			bundleStrategy: 'inline',
+		},
 		csp: {
 			directives: {
 				'default-src': ['none'],
@@ -14,7 +17,7 @@ const config = {
 				'style-src': ['self', 'unsafe-inline'],
 				'script-src': ['self', 'https://static.cloudflareinsights.com', 'https://va.vercel-scripts.com', 'unsafe-inline'],
 				'connect-src': ['self', 'https://cloudflareinsights.com'],
-				'font-src': ['self'],
+				'font-src': ['self', 'data:'],
 				'manifest-src': ['self'],
 				'frame-ancestors': ['none'],
 				'object-src': ['none'],
