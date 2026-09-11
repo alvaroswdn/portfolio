@@ -1,0 +1,44 @@
+# Alvaro Raditya Soewardono
+
+Fullstack developer, robotics engineer, and cybersecurity specialist based in Jakarta, Indonesia. Automotive and Robotics Engineering student at BINUS ASO School of Engineering.
+
+The site is a single-page SvelteKit portfolio at https://alvaroswdn.my.id with a hero/about section and a projects section. Built with SvelteKit, TypeScript, Tailwind CSS, and GSAP for scroll animations.
+
+## Contact & Links
+
+- **Email:** hello@alvaroswdn.my.id
+- **GitHub:** https://github.com/alvaroswdn
+- **LinkedIn:** https://www.linkedin.com/in/alvaro-soewardono
+- **Instagram:** https://www.instagram.com/alvaroswdn
+
+## Education
+
+- **BINUS ASO School of Engineering** — Automotive and Robotics Engineering (2024–Present)
+- **Al-Izhar Pondok Labu Senior Highschool** — Natural Sciences (2021–2024)
+
+## Experience
+
+- **AeroBASE** — Head of Software Division. Drone control systems (PID stabilization and navigation), team website, software documentation and tutorials.
+- **BASE C.O.R.E.** — Head of Robotics Division (Sep 2025–Present). Research coordination in robotics.
+- **Lucky Network** — Chief Security Officer (Feb 2021–Present). Authentication system with data protection and high performance, infrastructure security, donation website with payment system.
+
+## Skills
+
+- **Programming:** TypeScript, JavaScript, Python, Go, Java, C++, Node.js
+- **Robotics:** ROS2 (Robot Operating System), Computer Vision, Object Detection, PID Control
+- **Web:** SvelteKit, Astro, Tailwind CSS, GSAP
+- **Systems:** System Administration, Database Administration, Cybersecurity
+
+## Projects
+
+- **AeroBASE** (https://aerobase.id) — Drone control system (PID), team website built with Astro, documentation and tutorials for future team members.
+- **Lucky Network** (https://www.luckynetwork.net/) — Authentication system, infrastructure security hardening, donation and payment processing website.
+
+## Achievement
+
+- **Eduversal Mathematics Competition** — Finalist in Grade 12 Category (Oct 2023)
+
+## Resources
+
+- **CV (PDF):** https://alvaroswdn.my.id/cv.pdf
+- **Source code (this site):** https://github.com/alvaroswdn/website
