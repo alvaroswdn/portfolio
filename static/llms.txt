@@ -2,14 +2,14 @@
 
 Fullstack developer, robotics engineer, and cybersecurity specialist based in Jakarta, Indonesia. Automotive and Robotics Engineering student at BINUS ASO School of Engineering.
 
-The site is a single-page SvelteKit portfolio at https://alvaroswdn.my.id with a hero/about section and a projects section. Built with SvelteKit, TypeScript, Tailwind CSS, and GSAP for scroll animations.
+The site is a single-page SvelteKit portfolio at [alvaroswdn.my.id](https://alvaroswdn.my.id) with a hero/about section and a projects section. Built with SvelteKit, TypeScript, Tailwind CSS, and GSAP for scroll animations.
 
 ## Contact & Links
 
-- **Email:** hello@alvaroswdn.my.id
-- **GitHub:** https://github.com/alvaroswdn
-- **LinkedIn:** https://www.linkedin.com/in/alvaro-soewardono
-- **Instagram:** https://www.instagram.com/alvaroswdn
+- **Email:** [hello@alvaroswdn.my.id](mailto:hello@alvaroswdn.my.id)
+- **GitHub:** [github.com/alvaroswdn](https://github.com/alvaroswdn)
+- **LinkedIn:** [linkedin.com/in/alvaro-soewardono](https://www.linkedin.com/in/alvaro-soewardono)
+- **Instagram:** [instagram.com/alvaroswdn](https://www.instagram.com/alvaroswdn)
 
 ## Education
 
@@ -31,8 +31,8 @@ The site is a single-page SvelteKit portfolio at https://alvaroswdn.my.id with a
 
 ## Projects
 
-- **AeroBASE** (https://aerobase.id) — Drone control system (PID), team website built with Astro, documentation and tutorials for future team members.
-- **Lucky Network** (https://www.luckynetwork.net/) — Authentication system, infrastructure security hardening, donation and payment processing website.
+- **[AeroBASE](https://aerobase.id)** — Drone control system (PID), team website built with Astro, documentation and tutorials for future team members.
+- **[Lucky Network](https://www.luckynetwork.net/)** — Authentication system, infrastructure security hardening, donation and payment processing website.
 
 ## Achievement
 
@@ -40,5 +40,5 @@ The site is a single-page SvelteKit portfolio at https://alvaroswdn.my.id with a
 
 ## Resources
 
-- **CV (PDF):** https://alvaroswdn.my.id/cv.pdf
-- **Source code (this site):** https://github.com/alvaroswdn/website
+- **[CV (PDF)](/cv.pdf)** — Download CV
+- **Source code (this site):** [github.com/alvaroswdn/website](https://github.com/alvaroswdn/website)
