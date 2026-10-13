@@ -1,4 +1,11 @@
 <script lang="ts">
+	import aerobaseImg from '#img/aerobase.png?enhanced';
+	import aerobase2Img from '#img/aerobase2.png?enhanced';
+	import aerobase3Img from '#img/aerobase3.png?enhanced';
+
+	import luckyAppealsImg from '#img/lucky_appeals.png?enhanced';
+	import luckyStoreImg from '#img/lucky_store.png?enhanced';
+
 	import Project from '#lib/Experience.svelte';
 	import LinkIcon from '#lib/icon/link.svelte';
 </script>
@@ -21,7 +28,7 @@
 			{/snippet}
 
 			{#snippet description()}
-				<ul class="list-disc pl-6 text-justify *:mb-2">
+				<ul class="list-disc pl-6 *:mb-2">
 					<li>
 						Built a modular ROS2 and MAVSDK offboard control system for autonomous navigation tested
 						across 20+ field and Gazebo-simulated flights, applied in the KRTI 2026 competition.
@@ -43,19 +50,19 @@
 
 			{#snippet images()}
 				<enhanced:img
-					src="./img/aerobase.png"
+					src={aerobaseImg}
 					alt="screenshot of the AeroBASE website landing page"
 					draggable="false"
 					sizes="min(560px, 90vw)"
 				/>
 				<enhanced:img
-					src="./img/aerobase2.png"
+					src={aerobase2Img}
 					alt="screenshot of AeroBASE website about page"
 					draggable="false"
 					sizes="min(560px, 90vw)"
 				/>
 				<enhanced:img
-					src="./img/aerobase3.png"
+					src={aerobase3Img}
 					alt="screenshot of the AeroBASE website news page"
 					draggable="false"
 					sizes="min(560px, 90vw)"
@@ -76,7 +83,7 @@
 			{/snippet}
 
 			{#snippet description()}
-				<ul class="list-disc pl-6 text-justify *:mb-2">
+				<ul class="list-disc pl-6 *:mb-2">
 					<li>
 						Architected a Java-based server management service handling real-time health-checking,
 						dynamic load balancing, and matchmaking, streamlining deployment workflows.
@@ -99,13 +106,13 @@
 
 			{#snippet images()}
 				<enhanced:img
-					src="./img/lucky_appeals.png"
+					src={luckyAppealsImg}
 					alt="screenshot of the Lucky Network Appeals page"
 					draggable="false"
 					sizes="min(560px, 90vw)"
 				/>
 				<enhanced:img
-					src="./img/lucky_store.png"
+					src={luckyStoreImg}
 					alt="screenshot of the Lucky Network Store page"
 					draggable="false"
 					sizes="min(560px, 90vw)"

@@ -3,23 +3,33 @@
 
 	type Props = {
 		name: string;
-		date: string;
-		description: Snippet;
+		description?: Snippet;
 		image: Snippet;
 	};
 
-	let { name, date, description, image }: Props = $props();
+	let { name, description, image }: Props = $props();
 </script>
 
 <div
-	class="relative overflow-clip group px-3 py-4 flex flex-col justify-center h-96 rounded-xs bg-neutral-800/20 border border-primary/20 w-56 cursor-pointer"
+	class="relative group overflow-clip px-4 pt-6 pb-4 flex flex-col-reverse justify-between h-96 rounded-sm border border-primary/20 w-56 text-background"
 >
-	<div
-		class="absolute inset-0 translate-y-full transition-transform duration-700 group-hover:translate-y-0"
-	>
-		<h2>{name}</h2>
-		<h3 class="text-[0.9rem] mb-2">{date}</h3>
-		<p class="text-[0.95rem] text-justify">{@render description()}</p>
+	<h2>{name}</h2>
+	{#if description}
+		<p class="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+			{@render description()}
+		</p>
+	{/if}
+	<div class="absolute inset-0 *:absolute *:inset-0 *:w-full *:h-full">
+		<div
+			class="-z-10 bg-ease-to-b from-primary/80 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 {!description &&
+				'opacity-0!'}"
+		></div>
+		<div class="-z-10 bg-ease-to-t from-primary/70 to-primary/0"></div>
+		<div
+			class="-z-20 flex items-center justify-center **:h-full **:object-cover **:scale-120 **:group-hover:scale-116 **:transition-transform **:duration-800 **:ease-out"
+		>
+			{@render image()}
+		</div>
+		<div class="-z-30 bg-neutral-500/5"></div>
 	</div>
-	<div class="*:absolute *:inset-0 *:w-full *:h-full *:object-cover -z-10">{@render image()}</div>
 </div>

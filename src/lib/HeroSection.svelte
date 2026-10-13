@@ -1,17 +1,20 @@
 <script lang="ts">
+	import DownloadIcon from '#lib/icon/download.svelte';
 	import { asset } from '$app/paths';
-	import DownloadIcon from '$lib/icon/download.svelte';
 
-	import heroBlurImage from './img/hero_blur.jpeg';
+	import heroImage from '#img/hero.webp?enhanced';
+	import heroBlurImage from '#img/hero_blur.jpeg?enhanced';
+	import humanImage from '#img/human.png?enhanced';
+	import sparklesImage from '#img/sparkles.png?enhanced';
 
-	import cppImage from './img/hero/cplusplus-128px.png';
-	import goImage from './img/hero/go-128px.png';
-	import javaImage from './img/hero/java-128px.png';
-	import nodejsImage from './img/hero/nodejs-128px.png';
-	import pythonImage from './img/hero/python-128px.png';
-	import rosImage from './img/hero/ros-128px.png';
-	import tailwindCssImage from './img/hero/tailwind-css-128px.png';
-	import typescriptImage from './img/hero/typescript-128px.png';
+	import cppImage from '#img/hero/cplusplus-128px.png?enhanced';
+	import goImage from '#img/hero/go-128px.png?enhanced';
+	import javaImage from '#img/hero/java-128px.png?enhanced';
+	import nodejsImage from '#img/hero/nodejs-128px.png?enhanced';
+	import pythonImage from '#img/hero/python-128px.png?enhanced';
+	import rosImage from '#img/hero/ros-128px.png?enhanced';
+	import tailwindCssImage from '#img/hero/tailwind-css-128px.png?enhanced';
+	import typescriptImage from '#img/hero/typescript-128px.png?enhanced';
 
 	let humanReady = $state(false);
 	let sparklesReady = $state(false);
@@ -41,14 +44,14 @@
 			</h1>
 			<span class="text-2xl text-accent font-semibold">Fullstack Developer</span>
 
-			<p class="text-justify mt-6 lg:pr-8">
+			<p class="mt-6 lg:pr-8">
 				I'm a highly committed learner with a growing interest in the field of technology. With an
 				extensive list of skills, seeking to continuously gain new experiences all over the world.
 			</p>
 		</div>
 		<div class="flex items-end px-4 lg:px-0">
 			<a
-				href={asset('/cv.pdf')}
+				href={asset('cv.pdf')}
 				download
 				class="flex w-full items-center justify-between gap-4 px-5 py-4 bg-accent text-white hover:scale-[102%] transition-all duration-400 ease-out lg:px-6 lg:py-5"
 			>
@@ -59,7 +62,7 @@
 	</div>
 
 	<div
-		class="relative select-none z-0 sm:rounded-sm flex items-center w-full aspect-10/5 sm:aspect-10/3 overflow-hidden bg-slate-200 **:transition-opacity **:duration-600 **:ease-in-out"
+		class="relative select-none z-0 sm:rounded-sm flex items-center w-full aspect-10/5 sm:aspect-10/3 overflow-hidden bg-neutral-500/5 **:transition-opacity **:duration-600 **:ease-in-out"
 	>
 		<div
 			data-speed="0.96"
@@ -81,7 +84,7 @@
 						alt={img.alt}
 						draggable="false"
 						class="animate-[rotate-reverse_30s_linear_infinite] will-change-transform"
-					/>
+					></enhanced:img>
 				</div>
 			{/each}
 		</div>
@@ -92,13 +95,13 @@
 			sparklesReady
 				? 'opacity-100'
 				: 'opacity-0'}"
-			src="./img/human.png"
+			src={humanImage}
 			alt="me from behind"
 			draggable="false"
 			fetchpriority="high"
 			sizes="min(360px, 40vw)"
 			onload={() => (humanReady = true)}
-		/>
+		></enhanced:img>
 		<enhanced:img
 			data-speed="0.96"
 			id="sparkles"
@@ -106,22 +109,22 @@
 			sparklesReady
 				? 'opacity-100'
 				: 'opacity-0'}"
-			src="./img/sparkles.png"
+			src={sparklesImage}
 			alt="sparkles around me"
 			draggable="false"
 			fetchpriority="high"
 			sizes="min(360px, 40vw)"
 			onload={() => (sparklesReady = true)}
-		/>
+		></enhanced:img>
 		<enhanced:img
 			data-speed="0.97"
-			src="./img/hero.webp"
+			src={heroImage}
 			alt="a random photograph by me"
 			draggable="false"
 			fetchpriority="high"
 			sizes="min(1280px, 100vw)"
 			onload={() => (backgroundReady = true)}
-		/>
+		></enhanced:img>
 		<enhanced:img
 			data-speed="0.97"
 			id="blur"
@@ -132,7 +135,7 @@
 			alt="a blurred photograph by me"
 			draggable="false"
 			fetchpriority="high"
-		/>
+		></enhanced:img>
 	</div>
 </section>
 

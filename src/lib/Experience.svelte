@@ -1,4 +1,5 @@
 <script lang="ts">
+	import GridIcon from '#lib/icon/grid.svelte';
 	import type { Snippet } from 'svelte';
 
 	type Props = {
@@ -34,14 +35,14 @@
 	</div>
 	<div class="w-screen overflow-x-auto px-2 lg:px-[calc((100%-72rem)/2)] scrollbar-hidden">
 		<div
-			class="flex lg:gap-6 px-2 gap-2 lg:px-8 [&_picture]:w-2xs sm:[&_picture]:w-xl **:rounded-xs [&_picture]:bg-neutral-500/5 [&_picture]:border [&_picture]:border-primary/20 [&_picture]:hidden [&_picture]:nth-[1]:block [&_picture]:nth-[2]:block"
+			class="flex lg:gap-4 px-2 gap-2 lg:px-8 [&_picture]:w-2xs sm:[&_picture]:w-xl **:rounded-md [&_picture]:bg-neutral-500/5 [&_picture]:border [&_picture]:border-primary/20 [&_picture]:hidden [&_picture]:nth-[1]:block [&_picture]:nth-[2]:block"
 		>
 			{@render images()}
 			<button
-				onclick={() => alert('henlo')}
 				class="flex items-center justify-center bg-neutral-500/5 transition-colors hover:bg-neutral-500/7 border border-primary/20 w-56 cursor-pointer"
-				>See More</button
 			>
+				<GridIcon />
+			</button>
 		</div>
 	</div>
 </div>
