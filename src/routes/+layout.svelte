@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Gallery from '#lib/Gallery.svelte';
+	import { hideGallery } from '#lib/GalleryState.svelte.ts';
 	import Header from '#lib/Header.svelte';
 	import '../app.css';
 
@@ -24,4 +26,7 @@
 			</footer>
 		</div>
 	</div>
+	<Gallery />
 </div>
+
+<svelte:window on:keyup={(e) => e.key === 'Escape' && hideGallery()} />

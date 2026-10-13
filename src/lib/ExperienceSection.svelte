@@ -18,7 +18,7 @@
 		<Project
 			id="aerobase"
 			title="Head of Software Division"
-			timespan="February 2023 — Present"
+			timespan="February 2025 — Present"
 			color="border-cyan-600"
 		>
 			{#snippet org()}
@@ -49,24 +49,30 @@
 			{/snippet}
 
 			{#snippet images()}
-				<enhanced:img
-					src={aerobaseImg}
-					alt="screenshot of the AeroBASE website landing page"
-					draggable="false"
-					sizes="min(560px, 90vw)"
-				/>
-				<enhanced:img
-					src={aerobase2Img}
-					alt="screenshot of AeroBASE website about page"
-					draggable="false"
-					sizes="min(560px, 90vw)"
-				/>
-				<enhanced:img
-					src={aerobase3Img}
-					alt="screenshot of the AeroBASE website news page"
-					draggable="false"
-					sizes="min(560px, 90vw)"
-				/>
+				<div class="col-span-2">
+					<enhanced:img
+						src={aerobaseImg}
+						alt="screenshot of the AeroBASE website landing page"
+						draggable="false"
+						sizes="min(560px, 90vw)"
+					/>
+				</div>
+				<div class="col-span-2">
+					<enhanced:img
+						src={aerobase2Img}
+						alt="screenshot of AeroBASE website about page"
+						draggable="false"
+						sizes="min(560px, 90vw)"
+					/>
+				</div>
+				<div class="col-span-2">
+					<enhanced:img
+						src={aerobase3Img}
+						alt="screenshot of the AeroBASE website news page"
+						draggable="false"
+						sizes="min(560px, 90vw)"
+					/>
+				</div>
 			{/snippet}
 		</Project>
 
@@ -105,18 +111,22 @@
 			{/snippet}
 
 			{#snippet images()}
-				<enhanced:img
-					src={luckyAppealsImg}
-					alt="screenshot of the Lucky Network Appeals page"
-					draggable="false"
-					sizes="min(560px, 90vw)"
-				/>
-				<enhanced:img
-					src={luckyStoreImg}
-					alt="screenshot of the Lucky Network Store page"
-					draggable="false"
-					sizes="min(560px, 90vw)"
-				/>
+				<div class="col-span-2">
+					<enhanced:img
+						src={luckyAppealsImg}
+						alt="screenshot of the Lucky Network Appeals page"
+						draggable="false"
+						sizes="min(560px, 90vw)"
+					/>
+				</div>
+				<div class="col-span-2">
+					<enhanced:img
+						src={luckyStoreImg}
+						alt="screenshot of the Lucky Network Store page"
+						draggable="false"
+						sizes="min(560px, 90vw)"
+					/>
+				</div>
 			{/snippet}
 		</Project>
 	</div>

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import GridIcon from '#lib/icon/grid.svelte';
 	import type { Snippet } from 'svelte';
+	import { setGallery } from './GalleryState.svelte';
 
 	type Props = {
 		id: string;
@@ -26,7 +27,7 @@
 				{/if}
 				<hr class={`absolute -bottom-px left-0 w-full border-2 ${color} -z-10`} />
 			</h2>
-			<div class="flex flex-col items-end text-right leading-none">
+			<div class="flex-col items-end text-right leading-none hidden lg:flex">
 				<h3>{title}</h3>
 				<h4 class="font-medium">{timespan}</h4>
 			</div>
@@ -35,10 +36,15 @@
 	</div>
 	<div class="w-screen overflow-x-auto px-2 lg:px-[calc((100%-72rem)/2)] scrollbar-hidden">
 		<div
-			class="flex lg:gap-4 px-2 gap-2 lg:px-8 [&_picture]:w-2xs sm:[&_picture]:w-xl **:rounded-md [&_picture]:bg-neutral-500/5 [&_picture]:border [&_picture]:border-primary/20 [&_picture]:hidden [&_picture]:nth-[1]:block [&_picture]:nth-[2]:block"
+			class="flex lg:gap-4 px-2 gap-2 lg:px-8 [&_>_div]:w-2xs sm:[&_>_div]:w-xl **:rounded-md [&_>_div]:bg-neutral-500/5 [&_>_div]:border [&_>_div]:border-primary/20 [&_>_div]:hidden [&_>_div]:nth-[1]:block [&_>_div]:nth-[2]:block"
 		>
 			{@render images()}
 			<button
+				onclick={() =>
+					setGallery(
+						`${id.replaceAll('_', ' ').replace(/\b\w/g, (l) => l.toUpperCase())} Work Gallery`,
+						images
+					)}
 				class="flex items-center justify-center bg-neutral-500/5 transition-colors hover:bg-neutral-500/7 border border-primary/20 w-56 cursor-pointer"
 			>
 				<GridIcon />
