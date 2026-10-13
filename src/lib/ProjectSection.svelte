@@ -103,7 +103,7 @@
 						sizes="min(560px, 90vw)"
 					/>
 				</div>
-				<div class="row-span-2 col-span-1">
+				<div class="col-span-1">
 					<enhanced:img
 						src={terraTray2Img}
 						alt="prototype of the TerraTray gantry system"
