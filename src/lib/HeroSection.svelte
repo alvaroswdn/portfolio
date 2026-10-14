@@ -65,7 +65,8 @@
 		class="relative select-none z-0 sm:rounded-sm flex items-center w-full aspect-10/5 sm:aspect-10/3 overflow-hidden bg-neutral-500/5 **:transition-opacity **:duration-600 **:ease-in-out"
 	>
 		<div
-			data-speed="0.96"
+			data-scroll
+			data-scroll-speed="-0.04"
 			id="skills"
 			class="absolute z-10 right-0 sm:right-1/64 top-1/10 sm:top-1/16 aspect-square w-1/2 sm:w-1/3 scale-120 flex items-center justify-center will-change-transform animate-[rotate_30s_linear_infinite] delay-200 {humanReady &&
 			sparklesReady &&
@@ -89,7 +90,8 @@
 			{/each}
 		</div>
 		<enhanced:img
-			data-speed="0.95"
+			data-scroll
+			data-scroll-speed="-0.05"
 			id="human"
 			class="absolute -bottom-8 sm:-bottom-14 -right-8 sm:right-0 w-auto h-12/11 z-40 {humanReady &&
 			sparklesReady
@@ -103,7 +105,8 @@
 			onload={() => (humanReady = true)}
 		></enhanced:img>
 		<enhanced:img
-			data-speed="0.96"
+			data-scroll
+			data-scroll-speed="-0.04"
 			id="sparkles"
 			class="absolute -bottom-8 sm:-bottom-14 -right-8 sm:right-0 w-auto h-12/11 z-30 {humanReady &&
 			sparklesReady
@@ -117,7 +120,8 @@
 			onload={() => (sparklesReady = true)}
 		></enhanced:img>
 		<enhanced:img
-			data-speed="0.97"
+			data-scroll
+			data-scroll-speed="-0.03"
 			src={heroImage}
 			alt="a random photograph by me"
 			draggable="false"
@@ -126,7 +130,8 @@
 			onload={() => (backgroundReady = true)}
 		></enhanced:img>
 		<enhanced:img
-			data-speed="0.97"
+			data-scroll
+			data-scroll-speed="-0.03"
 			id="blur"
 			class="z-10 absolute inset-0 top-1/2 -translate-y-1/2 w-full h-auto min-h-full {backgroundReady
 				? 'opacity-0'

@@ -2,16 +2,10 @@
 	import Gallery from '#lib/Gallery.svelte';
 	import { hideGallery } from '#lib/GalleryState.svelte.ts';
 	import Header from '#lib/Header.svelte';
+	import { initLenis } from '#lib/Scroller.svelte.ts';
 	import '../app.css';
 
-	import { gsap } from 'gsap';
-	import { ScrollSmoother } from 'gsap/ScrollSmoother';
-	import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-	import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 	const { children } = $props();
-
-	gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 </script>
 
 <div class="grid text-xl">
@@ -29,4 +23,4 @@
 	<Gallery />
 </div>
 
-<svelte:window on:keyup={(e) => e.key === 'Escape' && hideGallery()} />
+<svelte:window on:load={initLenis} on:keyup={(e) => e.key === 'Escape' && hideGallery()} />

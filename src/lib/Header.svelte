@@ -5,8 +5,7 @@
 	import LinkedInIcon from '#lib/icon/linkedin.svelte';
 	import type { Component } from 'svelte';
 
-	import { gsap } from 'gsap';
-	import { ScrollSmoother } from 'gsap/ScrollSmoother';
+	import { scroller } from './Scroller.svelte';
 
 	let lastScrollY = 0;
 
@@ -14,29 +13,29 @@
 		const header = document.getElementById('header')!;
 		const connectBar = document.getElementById('connect-bar')!;
 
-		ScrollSmoother.create({
-			smooth: 1.6,
-			effects: true,
-			ignoreMobileResize: true,
-			onUpdate: (self) => {
-				const progress = self.progress * window.innerHeight;
-				if (progress <= lastScrollY || progress < 100) {
-					header.classList.remove('-translate-y-full');
-					connectBar.classList.add('translate-y-full');
-				} else {
-					header.classList.add('-translate-y-full');
-					connectBar.classList.remove('translate-y-full');
-				}
-
-				if (progress <= 10) {
-					header.classList.add('sm:border-primary/0');
-				} else {
-					header.classList.remove('sm:border-primary/0');
-				}
-
-				lastScrollY = progress;
+		scroller?.window?.lenisInstance?.on('scroll', ({ scroll: progress }) => {
+			if (progress <= lastScrollY || progress < 100) {
+				header.classList.remove('-translate-y-full');
+				connectBar.classList.add('translate-y-full');
+			} else {
+				header.classList.add('-translate-y-full');
+				connectBar.classList.remove('translate-y-full');
 			}
+
+			if (progress <= 10) {
+				header.classList.add('sm:border-primary/0');
+			} else {
+				header.classList.remove('sm:border-primary/0');
+			}
+
+			lastScrollY = progress;
 		});
+
+		if (window.scrollY <= 10) {
+			header.classList.add('sm:border-primary/0');
+		} else {
+			header.classList.remove('sm:border-primary/0');
+		}
 	});
 </script>
 
@@ -58,7 +57,7 @@
 >
 	<div class="flex flex-col gap-4 items-center justify-between max-w-7xl m-auto sm:flex-row">
 		<button
-			onclick={() => gsap.to(window, { duration: 0.8, scrollTo: 0 })}
+			onclick={() => scroller.window?.scrollTo(0)}
 			class="flex items-center font-accent text-4xl font-semibold cursor-pointer"
 		>
 			alvaro<span class="text-accent">.</span>

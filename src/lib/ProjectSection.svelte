@@ -41,10 +41,12 @@
 			{/snippet}
 			{#snippet thumb()}
 				<enhanced:img
+					data-scroll
+					data-scroll-speed="-0.006"
 					src={krtiImg}
 					alt="venue for Kontes Robot Terbang Indonesia 2026"
 					draggable="false"
-					sizes="min(560px, 90vw)"
+					sizes="min(560px, 50vw)"
 				/>
 			{/snippet}
 			{#snippet images()}
@@ -53,7 +55,7 @@
 						src={krti1Img}
 						alt="AeroBASE drone for the KRTI 2026 competition"
 						draggable="false"
-						sizes="min(560px, 90vw)"
+						sizes="min(560px, 50vw)"
 					/>
 				</div>
 				<div class="col-span-3">
@@ -61,7 +63,7 @@
 						src={krti2Img}
 						alt="landing page of the AeroBASE website in 2026"
 						draggable="false"
-						sizes="min(560px, 90vw)"
+						sizes="min(560px, 50vw)"
 					/>
 				</div>
 				<div class="col-span-2">
@@ -69,7 +71,7 @@
 						src={krti3Img}
 						alt="AeroBASE GitHub repository for the KRTI 2026"
 						draggable="false"
-						sizes="min(560px, 90vw)"
+						sizes="min(560px, 50vw)"
 					/>
 				</div>
 				<div class="col-span-2">
@@ -77,7 +79,7 @@
 						src={krti4Img}
 						alt="Gazebo simulation of the AeroBASE drone"
 						draggable="false"
-						sizes="min(560px, 90vw)"
+						sizes="min(560px, 50vw)"
 					/>
 				</div>
 			{/snippet}
@@ -90,10 +92,12 @@
 			{/snippet}
 			{#snippet thumb()}
 				<enhanced:img
+					data-scroll
+					data-scroll-speed="-0.006"
 					src={terraTrayImg}
 					alt="TerraTray project web application"
 					draggable="false"
-					sizes="min(560px, 90vw)"
+					sizes="min(560px, 50vw)"
 				/>
 			{/snippet}
 			{#snippet images()}
@@ -102,7 +106,7 @@
 						src={terraTray1Img}
 						alt="prototype of the TerraTray product"
 						draggable="false"
-						sizes="min(560px, 90vw)"
+						sizes="min(560px, 50vw)"
 					/>
 				</div>
 				<div class="col-span-1">
@@ -110,7 +114,7 @@
 						src={terraTray2Img}
 						alt="prototype of the TerraTray gantry system"
 						draggable="false"
-						sizes="min(560px, 90vw)"
+						sizes="min(560px, 50vw)"
 					/>
 				</div>
 				<div class="col-span-3">
@@ -118,7 +122,7 @@
 						src={terraTray3Img}
 						alt="TerraTray presentation slide showcase"
 						draggable="false"
-						sizes="min(560px, 90vw)"
+						sizes="min(560px, 50vw)"
 					/>
 				</div>
 			{/snippet}
@@ -131,10 +135,12 @@
 			{/snippet}
 			{#snippet thumb()}
 				<enhanced:img
+					data-scroll
+					data-scroll-speed="-0.006"
 					src={insomniaImg}
 					alt="the BedWars game lobby using Insomnia"
 					draggable="false"
-					sizes="min(560px, 90vw)"
+					sizes="min(560px, 50vw)"
 				/>
 			{/snippet}
 			{#snippet images()}
@@ -143,7 +149,7 @@
 						src={insomnia1Img}
 						alt="the different servers Insomnia needs to manage"
 						draggable="false"
-						sizes="min(560px, 90vw)"
+						sizes="min(560px, 50vw)"
 					/>
 				</div>
 				<div class="col-span-3">
@@ -151,7 +157,7 @@
 						src={insomnia2Img}
 						alt="the console output of the Insomnia microservice"
 						draggable="false"
-						sizes="min(560px, 90vw)"
+						sizes="min(560px, 50vw)"
 					/>
 				</div>
 			{/snippet}
@@ -164,10 +170,12 @@
 			{/snippet}
 			{#snippet thumb()}
 				<enhanced:img
+					data-scroll
+					data-scroll-speed="-0.006"
 					src={mithImg}
 					alt="the limbo server using Mith authentication"
 					draggable="false"
-					sizes="min(560px, 90vw)"
+					sizes="min(560px, 50vw)"
 				/>
 			{/snippet}
 			{#snippet images()}
@@ -176,7 +184,7 @@
 						src={mith1Img}
 						alt="the email for Mith's password reset feature"
 						draggable="false"
-						sizes="min(560px, 90vw)"
+						sizes="min(560px, 50vw)"
 					/>
 				</div>
 				<div class="col-span-2">
@@ -184,7 +192,7 @@
 						src={mith2Img}
 						alt="repository of Mith's source code"
 						draggable="false"
-						sizes="min(560px, 90vw)"
+						sizes="min(560px, 50vw)"
 					/>
 				</div>
 			{/snippet}
@@ -197,10 +205,12 @@
 			{/snippet}
 			{#snippet thumb()}
 				<enhanced:img
+					data-scroll
+					data-scroll-speed="-0.006"
 					src={appealsImg}
 					alt="court house build from Lucky Network server"
 					draggable="false"
-					sizes="min(560px, 90vw)"
+					sizes="min(560px, 50vw)"
 				/>
 			{/snippet}
 			{#snippet images()}
@@ -209,7 +219,7 @@
 						src={appeals1Img}
 						alt="user page for submitting appeals on the Lucky Network Appeals website"
 						draggable="false"
-						sizes="min(560px, 90vw)"
+						sizes="min(560px, 50vw)"
 					/>
 				</div>
 				<div class="col-span-2">
@@ -217,7 +227,7 @@
 						src={appeals2Img}
 						alt="staff page for reviewing anticheat logs"
 						draggable="false"
-						sizes="min(560px, 90vw)"
+						sizes="min(560px, 50vw)"
 					/>
 				</div>
 				<div class="col-span-2">
@@ -225,7 +235,7 @@
 						src={appeals3Img}
 						alt="the email for Lucky Network Appeals' response feature"
 						draggable="false"
-						sizes="min(560px, 90vw)"
+						sizes="min(560px, 50vw)"
 						class="col-span-1"
 					/>
 				</div>
