@@ -1,3 +1,4 @@
+import { scroller } from '#lib/Scroller.svelte.ts';
 import type { Snippet } from 'svelte';
 
 export const galleryState = $state({
@@ -10,10 +11,12 @@ export function setGallery(title: string, images: Snippet) {
 	galleryState.title = title;
 	galleryState.images = images;
 	galleryState.show = true;
-	document.documentElement.classList.add('overflow-hidden');
+	scroller.window?.stop();
+	document.documentElement.style.overflow = 'hidden';
 }
 
 export function hideGallery() {
 	galleryState.show = false;
-	document.documentElement.classList.remove('overflow-hidden');
+	scroller.window?.start();
+	document.documentElement.style.overflow = 'hidden';
 }

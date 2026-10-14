@@ -14,7 +14,7 @@
 </script>
 
 <div
-	class="relative group overflow-clip px-3 lg:px-4 pt-3 lg:pt-6 pb-2 lg:pb-4 flex flex-col-reverse justify-between h-72 lg:h-96 rounded-sm border border-primary/20 w-full text-background"
+	class="relative group overflow-clip px-3 lg:px-4 pt-3 lg:pt-6 pb-2 lg:pb-4 flex flex-col-reverse justify-between h-72 lg:h-104 rounded-sm border border-primary/20 w-full text-background"
 >
 	<div class="flex items-center justify-between">
 		<h2 class="text-[1rem]">{name}</h2>

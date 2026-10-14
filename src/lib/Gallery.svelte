@@ -16,9 +16,14 @@
 		>
 		</button>
 		<div
-			class="w-screen h-screen flex justify-center overflow-y-auto px-4 py-64 pointer-events-none"
+			id="gallery-modal"
+			class="w-screen h-screen flex justify-center overflow-y-auto px-4 py-64"
+			role="presentation"
+			onclick={hideGallery}
+			data-lenis-prevent
 		>
 			<div
+				id="gallery-content"
 				class="bg-background rounded-md pt-4 lg:pt-8 p-6 lg:p-10 w-5xl h-fit pointer-events-auto"
 			>
 				<h2 class="text-2xl lg:text-3xl text-center font-semibold mb-6">{galleryState.title}</h2>

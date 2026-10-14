@@ -2,13 +2,6 @@
 	import ExperienceSection from '#lib/ExperienceSection.svelte';
 	import HeroSection from '#lib/HeroSection.svelte';
 	import ProjectSection from '#lib/ProjectSection.svelte';
-	import { gsap } from 'gsap';
-	import { ScrollSmoother } from 'gsap/ScrollSmoother';
-	import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-	$effect(() => {
-		gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-	});
 </script>
 
 <svelte:head>
