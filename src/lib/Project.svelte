@@ -1,34 +1,46 @@
 <script lang="ts">
+	import GridIcon from '#lib/icon/grid.svelte';
 	import type { Snippet } from 'svelte';
+	import { setGallery } from './GalleryState.svelte';
 
 	type Props = {
-		id: string;
-		title: string | Snippet;
-		color: string;
+		name: string;
 		description?: Snippet;
-		images: Snippet;
+		thumb: Snippet;
+		images?: Snippet;
 	};
 
-	let { id, title, color, description, images }: Props = $props();
+	let { name, description, thumb: image, images }: Props = $props();
 </script>
 
-<div {id}>
-	<div class="max-w-6xl m-auto px-6 mb-8">
-		<h1 class="relative w-fit text-3xl lg:text-4xl font-semibold mb-6">
-			{#if typeof title === 'string'}
-				{title}
-			{:else}
-				{@render title()}
-			{/if}
-			<hr class={`absolute -bottom-px left-0 w-full border-2 ${color} -z-10`} />
-		</h1>
-		{@render description?.()}
+<div
+	class="relative group overflow-clip px-3 lg:px-4 pt-3 lg:pt-6 pb-2 lg:pb-4 flex flex-col-reverse justify-between h-72 lg:h-96 rounded-sm border border-primary/20 w-full text-background"
+>
+	<div class="flex items-center justify-between">
+		<h2 class="text-[1rem]">{name}</h2>
+		{#if images}
+			<button
+				onclick={() => setGallery(`${name} Project Gallery`, images)}
+				class="cursor-pointer p-1"><GridIcon class="h-4.5 w-4.5 lg:h-5 lg:w-5" /></button
+			>
+		{/if}
 	</div>
-	<div class="w-screen overflow-x-auto px-2 lg:px-[calc((100%-72rem)/2)] scrollbar-hidden">
+	{#if description}
+		<p class="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+			{@render description()}
+		</p>
+	{/if}
+	<div class="absolute inset-0 -z-10 *:absolute *:inset-0 *:w-full *:h-full">
 		<div
-			class="flex w-fit lg:gap-6 px-2 gap-2 lg:px-8 [&_picture]:w-2xs sm:[&_picture]:w-lg **:rounded-sm [&_picture]:bg-slate-200 [&_picture]:border [&_picture]:border-primary/20"
+			class="-z-10 bg-ease-to-b from-primary/80 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 {!description &&
+				'opacity-0!'}"
+		></div>
+		<div class="-z-10 bg-ease-to-t from-primary/70 to-primary/0"></div>
+		<div
+			class="-z-20 flex items-center justify-center **:h-full **:object-cover **:scale-120 **:group-hover:scale-116 **:transition-transform **:duration-800 **:ease-out"
 		>
-			{@render images()}
+			{@render image()}
 		</div>
+		<div class="-z-30 bg-neutral-500/5"></div>
 	</div>
 </div>

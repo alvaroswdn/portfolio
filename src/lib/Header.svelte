@@ -1,8 +1,8 @@
 <script lang="ts">
-	import EmailIcon from '$lib/icon/email.svelte';
-	import GitHubIcon from '$lib/icon/github.svelte';
-	import InstagramIcon from '$lib/icon/instagram.svelte';
-	import LinkedInIcon from '$lib/icon/linkedin.svelte';
+	import EmailIcon from '#lib/icon/email.svelte';
+	import GitHubIcon from '#lib/icon/github.svelte';
+	import InstagramIcon from '#lib/icon/instagram.svelte';
+	import LinkedInIcon from '#lib/icon/linkedin.svelte';
 	import type { Component } from 'svelte';
 
 	import { gsap } from 'gsap';
@@ -29,9 +29,9 @@
 				}
 
 				if (progress <= 10) {
-					header.classList.add('sm:border-primary/0!');
+					header.classList.add('sm:border-primary/0');
 				} else {
-					header.classList.remove('sm:border-primary/0!');
+					header.classList.remove('sm:border-primary/0');
 				}
 
 				lastScrollY = progress;
@@ -54,7 +54,7 @@
 
 <header
 	id="header"
-	class="fixed top-0 w-full px-8 pt-2 pb-3 sm:pt-4 sm:pb-5 bg-background z-10 transition-all duration-400 ease-in-out border-b border-primary/20 sm:border-primary/0!"
+	class="fixed top-0 w-full px-8 pt-2 pb-3 sm:pt-4 sm:pb-5 bg-background z-10 transition-all duration-400 ease-in-out border-b border-primary/20 sm:border-primary/0"
 >
 	<div class="flex flex-col gap-4 items-center justify-between max-w-7xl m-auto sm:flex-row">
 		<button
@@ -75,6 +75,14 @@
 		</div>
 	</div>
 </header>
+
+<noscript>
+	<style>
+		#header {
+			border-color: color-mix(in oklab, var(--color-primary) 20%, transparent) !important;
+		}
+	</style>
+</noscript>
 
 <div
 	id="connect-bar"
