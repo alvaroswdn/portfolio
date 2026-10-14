@@ -30,7 +30,7 @@
 	<h1 class="mx-auto w-fit font-accent font-semibold text-4xl lg:text-5xl mb-12 lg:mb-16">
 		Recent Projects
 	</h1>
-	<div class="max-w-6xl m-auto px-6 mb-8 flex flex-col lg:flex-row items-center gap-4">
+	<div class="max-w-6xl m-auto px-6 mb-8 grid grid-cols-2 lg:grid-cols-5 items-center gap-4">
 		<Project name="KRTI 2026">
 			{#snippet description()}
 				Building a hexarotor with autonomous navigation, leveraging ROS2 and MAVSDK for offboard

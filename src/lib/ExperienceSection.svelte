@@ -6,7 +6,7 @@
 	import luckyAppealsImg from '#img/lucky_appeals.png?enhanced';
 	import luckyStoreImg from '#img/lucky_store.png?enhanced';
 
-	import Project from '#lib/Experience.svelte';
+	import Experience from '#lib/Experience.svelte';
 	import LinkIcon from '#lib/icon/link.svelte';
 </script>
 
@@ -15,7 +15,7 @@
 		Work Experience
 	</h1>
 	<div class="grid gap-16 lg:gap-36">
-		<Project
+		<Experience
 			id="aerobase"
 			title="Head of Software Division"
 			timespan="February 2025 — Present"
@@ -74,9 +74,9 @@
 					/>
 				</div>
 			{/snippet}
-		</Project>
+		</Experience>
 
-		<Project
+		<Experience
 			id="lucky_network"
 			title="Chief Security Officer"
 			timespan="February 2021 — Present"
@@ -128,6 +128,6 @@
 					/>
 				</div>
 			{/snippet}
-		</Project>
+		</Experience>
 	</div>
 </section>

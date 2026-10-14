@@ -14,7 +14,7 @@
 </script>
 
 <div
-	class="relative group overflow-clip px-4 pt-6 pb-4 flex flex-col-reverse justify-between h-96 rounded-sm border border-primary/20 w-56 text-background"
+	class="relative group overflow-clip px-4 pt-6 pb-4 flex flex-col-reverse justify-between h-72 lg:h-96 rounded-sm border border-primary/20 w-full text-background"
 >
 	<h2 class="flex items-center justify-between">
 		{name}
