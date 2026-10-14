@@ -14,17 +14,17 @@
 </script>
 
 <div
-	class="relative group overflow-clip px-4 pt-6 pb-4 flex flex-col-reverse justify-between h-72 lg:h-96 rounded-sm border border-primary/20 w-full text-background"
+	class="relative group overflow-clip px-3 lg:px-4 pt-3 lg:pt-6 pb-2 lg:pb-4 flex flex-col-reverse justify-between h-72 lg:h-96 rounded-sm border border-primary/20 w-full text-background"
 >
-	<h2 class="flex items-center justify-between">
-		{name}
+	<div class="flex items-center justify-between">
+		<h2 class="text-[1rem]">{name}</h2>
 		{#if images}
 			<button
 				onclick={() => setGallery(`${name} Project Gallery`, images)}
-				class="cursor-pointer p-1"><GridIcon class="h-5 w-5" /></button
+				class="cursor-pointer p-1"><GridIcon class="h-4.5 w-4.5 lg:h-5 lg:w-5" /></button
 			>
 		{/if}
-	</h2>
+	</div>
 	{#if description}
 		<p class="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">
 			{@render description()}
