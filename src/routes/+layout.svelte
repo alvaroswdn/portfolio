@@ -2,7 +2,7 @@
 	import Gallery from '#lib/Gallery.svelte';
 	import { hideGallery } from '#lib/GalleryState.svelte.ts';
 	import Header from '#lib/Header.svelte';
-	import { initLenis } from '#lib/Scroller.svelte.ts';
+	import { initScroller } from '#lib/Scroller.svelte.ts';
 	import '../app.css';
 
 	const { children } = $props();
@@ -23,4 +23,4 @@
 	<Gallery />
 </div>
 
-<svelte:window on:load={initLenis} on:keyup={(e) => e.key === 'Escape' && hideGallery()} />
+<svelte:window on:load={initScroller} on:keyup={(e) => e.key === 'Escape' && hideGallery()} />
