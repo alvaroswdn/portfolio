@@ -1,12 +1,12 @@
 import LocomotiveScroll from 'locomotive-scroll';
 
-type LenisState = {
+type ScrollerState = {
 	window?: LocomotiveScroll;
 };
 
-export const scroller: LenisState = $state({});
+export const scroller: ScrollerState = $state({});
 
-export function initLenis() {
+export function initScroller() {
 	scroller.window = new LocomotiveScroll({
 		lenisOptions: { duration: 1.6 }
 	});

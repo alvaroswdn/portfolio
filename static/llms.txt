@@ -2,7 +2,7 @@
 
 Fullstack developer, robotics engineer, and cybersecurity specialist based in Jakarta, Indonesia. Automotive and Robotics Engineering student at BINUS ASO School of Engineering.
 
-The site is a single-page SvelteKit portfolio at [alvaroswdn.my.id](https://alvaroswdn.my.id) with a hero/about section and a projects section. Built with SvelteKit, TypeScript, Tailwind CSS, and GSAP for scroll animations.
+The site is a single-page SvelteKit portfolio at [alvaroswdn.my.id](https://alvaroswdn.my.id) with a hero/about section and a projects section. Built with SvelteKit, TypeScript, Tailwind CSS, and Locomotive Scroll for scroll animations.
 
 ## Contact & Links
 
@@ -18,21 +18,27 @@ The site is a single-page SvelteKit portfolio at [alvaroswdn.my.id](https://alva
 
 ## Experience
 
-- **AeroBASE** — Head of Software Division. Drone control systems (PID stabilization and navigation), team website, software documentation and tutorials.
+- **AeroBASE** — Head of Software Division (Feb 2025–Present). ROS2 and MAVSDK offboard control for autonomous drone navigation, real-time YOLO object detection on edge compute, vision-based pose estimation from monocular camera, team landing website.
 - **BASE C.O.R.E.** — Head of Robotics Division (Sep 2025–Present). Research coordination in robotics.
-- **Lucky Network** — Chief Security Officer (Feb 2021–Present). Authentication system with data protection and high performance, infrastructure security, donation website with payment system.
+- **Lucky Network** — Chief Security Officer (Feb 2021–Present). Java-based server management service with health-checking and load balancing, Go gRPC authentication system handling 1000+ concurrent players, network security hardening, automated payment gateway and donation platform.
 
 ## Skills
 
 - **Programming:** TypeScript, JavaScript, Python, Go, Java, C++, Node.js
-- **Robotics:** ROS2 (Robot Operating System), Computer Vision, Object Detection, PID Control
-- **Web:** SvelteKit, Astro, Tailwind CSS, GSAP
+- **Frameworks & Protocols:** SvelteKit, Astro, Tailwind CSS, gRPC
+- **Robotics:** ROS2 (Robot Operating System), MAVSDK, Computer Vision, Object Detection (YOLO), PID Control
+- **Data:** MySQL, PostgreSQL
 - **Systems:** System Administration, Database Administration, Cybersecurity
 
 ## Projects
 
+- **[KRTI 2026](https://aerobase.id)** — Hexarotor with autonomous navigation using ROS2 and MAVSDK offboard control. Computer vision for the Kontes Robot Terbang Indonesia 2026 track.
 - **[AeroBASE](https://aerobase.id)** — Drone control system (PID), team website built with Astro, documentation and tutorials for future team members.
 - **[Lucky Network](https://www.luckynetwork.net/)** — Authentication system, infrastructure security hardening, donation and payment processing website.
+- **[Insomnia](https://github.com/alvaroswdn)** — Java-based microservice for game server management and matchmaking, built with gRPC and MySQL.
+- **[Mith](https://github.com/alvaroswdn)** — Go application for secure authentication of thousands of player accounts using gRPC and MySQL.
+- **[Appeals](https://github.com/alvaroswdn)** — SvelteKit web application for submitting and reviewing punishment appeals, built with TailwindCSS and PostgreSQL.
+- **[TerraTray](https://github.com/alvaroswdn)** — Web app-connected gantry system for automated plant seeding using PID control.
 
 ## Achievement
 
