@@ -7,17 +7,15 @@
 
 	import { scroller } from './Scroller.svelte';
 
-	let lastScrollY = 0;
-
 	$effect(() => {
 		const header = document.getElementById('header')!;
 		const connectBar = document.getElementById('connect-bar')!;
 
-		scroller?.window?.lenisInstance?.on('scroll', ({ scroll: progress }) => {
-			if (progress <= lastScrollY || progress < 100) {
+		scroller?.window?.lenisInstance?.on('scroll', ({ scroll: progress, velocity }) => {
+			if (velocity < -6 || progress < 100) {
 				header.classList.remove('-translate-y-full');
 				connectBar.classList.add('translate-y-full');
-			} else {
+			} else if (velocity > 6) {
 				header.classList.add('-translate-y-full');
 				connectBar.classList.remove('translate-y-full');
 			}
@@ -27,8 +25,6 @@
 			} else {
 				header.classList.remove('sm:border-primary/0');
 			}
-
-			lastScrollY = progress;
 		});
 
 		if (window.scrollY <= 10) {

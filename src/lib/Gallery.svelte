@@ -28,7 +28,7 @@
 			>
 				<h2 class="text-2xl lg:text-3xl text-center font-semibold mb-6">{galleryState.title}</h2>
 				<div
-					class="grid grid-cols-1 justify-center lg:grid-cols-4 gap-4 *:border *:border-primary/20 *:rounded-sm *:bg-neutral-500/5"
+					class="grid grid-cols-1 justify-center lg:grid-cols-4 gap-4 *:border *:border-primary/20 *:rounded-sm *:bg-neutral-500/5 not-lg:*:col-span-1!"
 				>
 					{#if galleryState.images}
 						{@render galleryState.images()}

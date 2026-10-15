@@ -18,5 +18,5 @@ export function setGallery(title: string, images: Snippet) {
 export function hideGallery() {
 	galleryState.show = false;
 	scroller.window?.start();
-	document.documentElement.style.overflow = 'hidden';
+	document.documentElement.style.overflow = 'auto';
 }
