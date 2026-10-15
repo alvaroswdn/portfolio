@@ -11,7 +11,7 @@
 <div class="grid text-xl">
 	<Header />
 	<div id="smooth-wrapper">
-		<div id="smooth-content" class="pt-18 sm:pt-22">
+		<div id="smooth-content" class="pt-15 sm:pt-22">
 			<main class="mb-24">
 				{@render children()}
 			</main>

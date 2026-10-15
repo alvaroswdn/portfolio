@@ -7,10 +7,11 @@
 	let backgroundReady = $state(false);
 </script>
 
-<section id="hero" class="grid gap-16 max-w-7xl mx-auto sm:mt-8 sm:px-4">
-	<div
-		class="w-full flex flex-col gap-12 justify-between max-w-6xl mx-auto px-8 not-first:pt-18 lg:flex-row"
-	>
+<section
+	id="hero"
+	class="flex flex-col-reverse lg:flex-col gap-2 lg:gap-16 max-w-7xl mx-auto sm:mt-8 sm:px-4"
+>
+	<div class="w-full flex flex-col gap-12 justify-between max-w-6xl mx-auto px-8 lg:flex-row">
 		<div class="max-w-2xl">
 			<h1 class="text-4xl lg:text-5xl font-accent font-semibold mt-6 mb-1">
 				Alvaro Raditya Soewardono
