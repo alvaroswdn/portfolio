@@ -2,36 +2,9 @@
 	import DownloadIcon from '#lib/icon/download.svelte';
 	import { asset } from '$app/paths';
 
-	import heroImage from '#img/hero.webp?enhanced';
-	import heroBlurImage from '#img/hero_blur.jpeg?enhanced';
-	import humanImage from '#img/human.png?enhanced';
-	import sparklesImage from '#img/sparkles.png?enhanced';
-
-	import cppImage from '#img/hero/cplusplus-128px.png?enhanced';
-	import goImage from '#img/hero/go-128px.png?enhanced';
-	import javaImage from '#img/hero/java-128px.png?enhanced';
-	import nodejsImage from '#img/hero/nodejs-128px.png?enhanced';
-	import pythonImage from '#img/hero/python-128px.png?enhanced';
-	import rosImage from '#img/hero/ros-128px.png?enhanced';
-	import tailwindCssImage from '#img/hero/tailwind-css-128px.png?enhanced';
-	import typescriptImage from '#img/hero/typescript-128px.png?enhanced';
-
 	let humanReady = $state(false);
 	let sparklesReady = $state(false);
 	let backgroundReady = $state(false);
-
-	const imgs = [
-		{ src: goImage, alt: 'Go programming language' },
-		{ src: javaImage, alt: 'Java programming language' },
-		{ src: nodejsImage, alt: 'Node.js runtime' },
-		{ src: pythonImage, alt: 'Python programming language' },
-		{ src: tailwindCssImage, alt: 'Tailwind CSS framework' },
-		{ src: typescriptImage, alt: 'TypeScript programming language' },
-		{ src: rosImage, alt: 'ROS2 (Robot Operating System)' },
-		{ src: cppImage, alt: 'C++ programming language' }
-	];
-
-	let hasMid = 0;
 </script>
 
 <section id="hero" class="grid gap-16 max-w-7xl mx-auto sm:mt-8 sm:px-4">
@@ -73,21 +46,96 @@
 			backgroundReady
 				? 'opacity-100'
 				: 'opacity-0'}"
-			style="--m: {imgs.length - hasMid}"
+			style="--m: 8"
 		>
-			{#each imgs as img, i (img.src)}
-				<div
-					class="rotating-el absolute w-1/7 aspect-square opacity-60 brightness-0 invert z-20"
-					style={i - hasMid >= 0 ? `--i: ${i}` : null}
-				>
-					<enhanced:img
-						src={img.src}
-						alt={img.alt}
-						draggable="false"
-						class="animate-[rotate-reverse_30s_linear_infinite] will-change-transform"
-					></enhanced:img>
-				</div>
-			{/each}
+			<div
+				class="rotating-el absolute w-1/7 aspect-square opacity-60 brightness-0 invert z-20"
+				style="--i: 0"
+			>
+				<enhanced:img
+					src="../img/hero/go-128px.png"
+					alt="Go programming language"
+					draggable="false"
+					class="animate-[rotate-reverse_30s_linear_infinite] will-change-transform"
+				></enhanced:img>
+			</div>
+			<div
+				class="rotating-el absolute w-1/7 aspect-square opacity-60 brightness-0 invert z-20"
+				style="--i: 1"
+			>
+				<enhanced:img
+					src="../img/hero/java-128px.png"
+					alt="Java programming language"
+					draggable="false"
+					class="animate-[rotate-reverse_30s_linear_infinite] will-change-transform"
+				></enhanced:img>
+			</div>
+			<div
+				class="rotating-el absolute w-1/7 aspect-square opacity-60 brightness-0 invert z-20"
+				style="--i: 2"
+			>
+				<enhanced:img
+					src="../img/hero/nodejs-128px.png"
+					alt="Node.js runtime"
+					draggable="false"
+					class="animate-[rotate-reverse_30s_linear_infinite] will-change-transform"
+				></enhanced:img>
+			</div>
+			<div
+				class="rotating-el absolute w-1/7 aspect-square opacity-60 brightness-0 invert z-20"
+				style="--i: 3"
+			>
+				<enhanced:img
+					src="../img/hero/python-128px.png"
+					alt="Python programming language"
+					draggable="false"
+					class="animate-[rotate-reverse_30s_linear_infinite] will-change-transform"
+				></enhanced:img>
+			</div>
+			<div
+				class="rotating-el absolute w-1/7 aspect-square opacity-60 brightness-0 invert z-20"
+				style="--i: 4"
+			>
+				<enhanced:img
+					src="../img/hero/tailwind-css-128px.png"
+					alt="Tailwind CSS framework"
+					draggable="false"
+					class="animate-[rotate-reverse_30s_linear_infinite] will-change-transform"
+				></enhanced:img>
+			</div>
+			<div
+				class="rotating-el absolute w-1/7 aspect-square opacity-60 brightness-0 invert z-20"
+				style="--i: 5"
+			>
+				<enhanced:img
+					src="../img/hero/typescript-128px.png"
+					alt="TypeScript programming language"
+					draggable="false"
+					class="animate-[rotate-reverse_30s_linear_infinite] will-change-transform"
+				></enhanced:img>
+			</div>
+			<div
+				class="rotating-el absolute w-1/7 aspect-square opacity-60 brightness-0 invert z-20"
+				style="--i: 6"
+			>
+				<enhanced:img
+					src="../img/hero/ros-128px.png"
+					alt="ROS2 (Robot Operating System)"
+					draggable="false"
+					class="animate-[rotate-reverse_30s_linear_infinite] will-change-transform"
+				></enhanced:img>
+			</div>
+			<div
+				class="rotating-el absolute w-1/7 aspect-square opacity-60 brightness-0 invert z-20"
+				style="--i: 7"
+			>
+				<enhanced:img
+					src="../img/hero/cplusplus-128px.png"
+					alt="C++ programming language"
+					draggable="false"
+					class="animate-[rotate-reverse_30s_linear_infinite] will-change-transform"
+				></enhanced:img>
+			</div>
 		</div>
 		<enhanced:img
 			data-scroll
@@ -97,7 +145,7 @@
 			sparklesReady
 				? 'opacity-100'
 				: 'opacity-0'}"
-			src={humanImage}
+			src="../img/human.png"
 			alt="me from behind"
 			draggable="false"
 			fetchpriority="high"
@@ -112,7 +160,7 @@
 			sparklesReady
 				? 'opacity-100'
 				: 'opacity-0'}"
-			src={sparklesImage}
+			src="../img/sparkles.png"
 			alt="sparkles around me"
 			draggable="false"
 			fetchpriority="high"
@@ -122,7 +170,7 @@
 		<enhanced:img
 			data-scroll
 			data-scroll-speed="-0.03"
-			src={heroImage}
+			src="../img/hero.webp"
 			alt="a random photograph by me"
 			draggable="false"
 			fetchpriority="high"
@@ -136,7 +184,7 @@
 			class="z-10 absolute inset-0 top-1/2 -translate-y-1/2 w-full h-auto min-h-full {backgroundReady
 				? 'opacity-0'
 				: 'opacity-100'}"
-			src={heroBlurImage}
+			src="../img/hero_blur.jpeg"
 			alt="a blurred photograph by me"
 			draggable="false"
 			fetchpriority="high"

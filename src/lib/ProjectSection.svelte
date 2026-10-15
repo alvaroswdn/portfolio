@@ -1,28 +1,4 @@
 <script lang="ts">
-	import appealsImg from '#img/projects/appeals.png?enhanced';
-	import appeals1Img from '#img/projects/appeals/img1.png?enhanced';
-	import appeals2Img from '#img/projects/appeals/img2.png?enhanced';
-	import appeals3Img from '#img/projects/appeals/img3.png?enhanced';
-
-	import mithImg from '#img/projects/mith.png?enhanced';
-	import mith1Img from '#img/projects/mith/img1.png?enhanced';
-	import mith2Img from '#img/projects/mith/img2.png?enhanced';
-
-	import insomniaImg from '#img/projects/insomnia.png?enhanced';
-	import insomnia1Img from '#img/projects/insomnia/img1.png?enhanced';
-	import insomnia2Img from '#img/projects/insomnia/img2.png?enhanced';
-
-	import krtiImg from '#img/projects/krti.jpg?enhanced';
-	import krti1Img from '#img/projects/krti/img1.png?enhanced';
-	import krti2Img from '#img/projects/krti/img2.png?enhanced';
-	import krti3Img from '#img/projects/krti/img3.png?enhanced';
-	import krti4Img from '#img/projects/krti/img4.png?enhanced';
-
-	import terraTrayImg from '#img/projects/terratray.png?enhanced';
-	import terraTray1Img from '#img/projects/terratray/img1.png?enhanced';
-	import terraTray2Img from '#img/projects/terratray/img2.png?enhanced';
-	import terraTray3Img from '#img/projects/terratray/img3.png?enhanced';
-
 	import Project from '#lib/Project.svelte';
 </script>
 
@@ -43,7 +19,7 @@
 				<enhanced:img
 					data-scroll
 					data-scroll-speed="-0.006"
-					src={krtiImg}
+					src="../img/projects/krti.jpg"
 					alt="venue for Kontes Robot Terbang Indonesia 2026"
 					draggable="false"
 					sizes="min(560px, 50vw)"
@@ -52,7 +28,7 @@
 			{#snippet images()}
 				<div class="col-span-1">
 					<enhanced:img
-						src={krti1Img}
+						src="../img/projects/krti/img1.png"
 						alt="AeroBASE drone for the KRTI 2026 competition"
 						draggable="false"
 						sizes="min(560px, 50vw)"
@@ -60,7 +36,7 @@
 				</div>
 				<div class="col-span-3">
 					<enhanced:img
-						src={krti2Img}
+						src="../img/projects/krti/img2.png"
 						alt="landing page of the AeroBASE website in 2026"
 						draggable="false"
 						sizes="min(560px, 50vw)"
@@ -68,7 +44,7 @@
 				</div>
 				<div class="col-span-2">
 					<enhanced:img
-						src={krti3Img}
+						src="../img/projects/krti/img3.png"
 						alt="AeroBASE GitHub repository for the KRTI 2026"
 						draggable="false"
 						sizes="min(560px, 50vw)"
@@ -76,7 +52,7 @@
 				</div>
 				<div class="col-span-2">
 					<enhanced:img
-						src={krti4Img}
+						src="../img/projects/krti/img4.png"
 						alt="Gazebo simulation of the AeroBASE drone"
 						draggable="false"
 						sizes="min(560px, 50vw)"
@@ -94,7 +70,7 @@
 				<enhanced:img
 					data-scroll
 					data-scroll-speed="-0.006"
-					src={terraTrayImg}
+					src="../img/projects/terratray.png"
 					alt="TerraTray project web application"
 					draggable="false"
 					sizes="min(560px, 50vw)"
@@ -103,7 +79,7 @@
 			{#snippet images()}
 				<div class="col-span-3">
 					<enhanced:img
-						src={terraTray1Img}
+						src="../img/projects/terratray/img1.png"
 						alt="prototype of the TerraTray product"
 						draggable="false"
 						sizes="min(560px, 50vw)"
@@ -111,7 +87,7 @@
 				</div>
 				<div class="col-span-1">
 					<enhanced:img
-						src={terraTray2Img}
+						src="../img/projects/terratray/img2.png"
 						alt="prototype of the TerraTray gantry system"
 						draggable="false"
 						sizes="min(560px, 50vw)"
@@ -119,7 +95,7 @@
 				</div>
 				<div class="col-span-3">
 					<enhanced:img
-						src={terraTray3Img}
+						src="../img/projects/terratray/img3.png"
 						alt="TerraTray presentation slide showcase"
 						draggable="false"
 						sizes="min(560px, 50vw)"
@@ -137,7 +113,7 @@
 				<enhanced:img
 					data-scroll
 					data-scroll-speed="-0.006"
-					src={insomniaImg}
+					src="../img/projects/insomnia.png"
 					alt="the BedWars game lobby using Insomnia"
 					draggable="false"
 					sizes="min(560px, 50vw)"
@@ -146,7 +122,7 @@
 			{#snippet images()}
 				<div class="col-span-3">
 					<enhanced:img
-						src={insomnia1Img}
+						src="../img/projects/insomnia/img1.png"
 						alt="the different servers Insomnia needs to manage"
 						draggable="false"
 						sizes="min(560px, 50vw)"
@@ -154,7 +130,7 @@
 				</div>
 				<div class="col-span-3">
 					<enhanced:img
-						src={insomnia2Img}
+						src="../img/projects/insomnia/img2.png"
 						alt="the console output of the Insomnia microservice"
 						draggable="false"
 						sizes="min(560px, 50vw)"
@@ -172,7 +148,7 @@
 				<enhanced:img
 					data-scroll
 					data-scroll-speed="-0.006"
-					src={mithImg}
+					src="../img/projects/mith.png"
 					alt="the limbo server using Mith authentication"
 					draggable="false"
 					sizes="min(560px, 50vw)"
@@ -181,7 +157,7 @@
 			{#snippet images()}
 				<div class="col-span-2">
 					<enhanced:img
-						src={mith1Img}
+						src="../img/projects/mith/img1.png"
 						alt="the email for Mith's password reset feature"
 						draggable="false"
 						sizes="min(560px, 50vw)"
@@ -189,7 +165,7 @@
 				</div>
 				<div class="col-span-2">
 					<enhanced:img
-						src={mith2Img}
+						src="../img/projects/mith/img2.png"
 						alt="repository of Mith's source code"
 						draggable="false"
 						sizes="min(560px, 50vw)"
@@ -207,7 +183,7 @@
 				<enhanced:img
 					data-scroll
 					data-scroll-speed="-0.006"
-					src={appealsImg}
+					src="../img/projects/appeals.png"
 					alt="court house build from Lucky Network server"
 					draggable="false"
 					sizes="min(560px, 50vw)"
@@ -216,7 +192,7 @@
 			{#snippet images()}
 				<div class="col-span-2">
 					<enhanced:img
-						src={appeals1Img}
+						src="../img/projects/appeals/img1.png"
 						alt="user page for submitting appeals on the Lucky Network Appeals website"
 						draggable="false"
 						sizes="min(560px, 50vw)"
@@ -224,7 +200,7 @@
 				</div>
 				<div class="col-span-2">
 					<enhanced:img
-						src={appeals2Img}
+						src="../img/projects/appeals/img2.png"
 						alt="staff page for reviewing anticheat logs"
 						draggable="false"
 						sizes="min(560px, 50vw)"
@@ -232,7 +208,7 @@
 				</div>
 				<div class="col-span-2">
 					<enhanced:img
-						src={appeals3Img}
+						src="../img/projects/appeals/img3.png"
 						alt="the email for Lucky Network Appeals' response feature"
 						draggable="false"
 						sizes="min(560px, 50vw)"
@@ -241,5 +217,8 @@
 				</div>
 			{/snippet}
 		</Project>
+		<div
+			class="bg-neutral-500/5 border border-dashed border-primary/20 rounded-sm lg:hidden w-full h-full"
+		></div>
 	</div>
 </section>

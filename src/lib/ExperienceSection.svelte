@@ -1,11 +1,4 @@
 <script lang="ts">
-	import aerobaseImg from '#img/aerobase.png?enhanced';
-	import aerobase2Img from '#img/aerobase2.png?enhanced';
-	import aerobase3Img from '#img/aerobase3.png?enhanced';
-
-	import luckyAppealsImg from '#img/lucky_appeals.png?enhanced';
-	import luckyStoreImg from '#img/lucky_store.png?enhanced';
-
 	import Experience from '#lib/Experience.svelte';
 	import LinkIcon from '#lib/icon/link.svelte';
 </script>
@@ -51,7 +44,7 @@
 			{#snippet images()}
 				<div class="col-span-2">
 					<enhanced:img
-						src={aerobaseImg}
+						src="../img/aerobase.png"
 						alt="screenshot of the AeroBASE website landing page"
 						draggable="false"
 						sizes="min(560px, 50vw)"
@@ -59,7 +52,7 @@
 				</div>
 				<div class="col-span-2">
 					<enhanced:img
-						src={aerobase2Img}
+						src="../img/aerobase2.png"
 						alt="screenshot of AeroBASE website about page"
 						draggable="false"
 						sizes="min(560px, 50vw)"
@@ -67,7 +60,7 @@
 				</div>
 				<div class="col-span-2">
 					<enhanced:img
-						src={aerobase3Img}
+						src="../img/aerobase3.png"
 						alt="screenshot of the AeroBASE website news page"
 						draggable="false"
 						sizes="min(560px, 50vw)"
@@ -113,7 +106,7 @@
 			{#snippet images()}
 				<div class="col-span-2">
 					<enhanced:img
-						src={luckyAppealsImg}
+						src="../img/lucky_appeals.png"
 						alt="screenshot of the Lucky Network Appeals page"
 						draggable="false"
 						sizes="min(560px, 50vw)"
@@ -121,7 +114,7 @@
 				</div>
 				<div class="col-span-2">
 					<enhanced:img
-						src={luckyStoreImg}
+						src="../img/lucky_store.png"
 						alt="screenshot of the Lucky Network Store page"
 						draggable="false"
 						sizes="min(560px, 50vw)"
