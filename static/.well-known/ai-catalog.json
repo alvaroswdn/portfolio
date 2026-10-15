@@ -1,0 +1,31 @@
+{
+	"specVersion": "1.0",
+	"host": {
+		"displayName": "Alvaro Raditya Soewardono",
+		"identifier": "did:web:alvaroswdn.my.id",
+		"documentationUrl": "https://alvaroswdn.my.id",
+		"logoUrl": "https://alvaroswdn.my.id/icons/logo-512.webp"
+	},
+	"entries": [
+		{
+			"identifier": "urn:air:alvaroswdn.my.id:docs:llms",
+			"displayName": "Site Context — alvaroswdn.my.id",
+			"type": "text/markdown",
+			"url": "https://alvaroswdn.my.id/llms.txt",
+			"description": "Structured Markdown profile of Alvaro Raditya Soewardono: portfolio, contact, education, experience, skills, and projects, formatted for AI agent consumption.",
+			"tags": ["portfolio", "personal-site", "contact", "resume"],
+			"version": "1.0.0",
+			"updatedAt": "2026-10-14T15:49:29+07:00"
+		},
+		{
+			"identifier": "urn:air:alvaroswdn.my.id:docs:cv",
+			"displayName": "Curriculum Vitae — Alvaro Raditya Soewardono",
+			"type": "application/pdf",
+			"url": "https://alvaroswdn.my.id/cv.pdf",
+			"description": "Professional CV: full-stack developer, robotics engineer, and cybersecurity specialist. Education, experience, skills, projects, and achievements.",
+			"tags": ["cv", "resume", "portfolio"],
+			"version": "1.0.0",
+			"updatedAt": "2026-01-06T11:19:34+07:00"
+		}
+	]
+}

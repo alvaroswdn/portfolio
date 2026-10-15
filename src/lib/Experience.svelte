@@ -45,6 +45,7 @@
 						`${id.replaceAll('_', ' ').replace(/\b\w/g, (l) => l.toUpperCase())} Work Gallery`,
 						images
 					)}
+				aria-label="Open gallery"
 				class="flex items-center justify-center bg-neutral-500/5 transition-colors py-4 hover:bg-neutral-500/7 border border-primary/20 w-56 cursor-pointer"
 			>
 				<GridIcon />

@@ -19,8 +19,10 @@
 	<div class="flex items-center justify-between">
 		<h2 class="text-[1rem]">{name}</h2>
 		{#if images}
-			<button onclick={() => setGallery(`${name} Project Gallery`, images)} class="cursor-pointer"
-				><GridIcon class="h-4 w-4 lg:h-5 lg:w-5" /></button
+			<button
+				onclick={() => setGallery(`${name} Project Gallery`, images)}
+				aria-label="Open gallery"
+				class="cursor-pointer"><GridIcon class="h-4 w-4 lg:h-5 lg:w-5" /></button
 			>
 		{/if}
 	</div>
