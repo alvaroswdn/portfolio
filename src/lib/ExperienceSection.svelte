@@ -47,7 +47,7 @@
 						src="../img/aerobase.png"
 						alt="screenshot of the AeroBASE website landing page"
 						draggable="false"
-						sizes="min(560px, 50vw)"
+						sizes="min(560px, 98vw)"
 					/>
 				</div>
 				<div class="col-span-2">
@@ -55,7 +55,7 @@
 						src="../img/aerobase2.png"
 						alt="screenshot of AeroBASE website about page"
 						draggable="false"
-						sizes="min(560px, 50vw)"
+						sizes="min(560px, 98vw)"
 					/>
 				</div>
 				<div class="col-span-2">
@@ -63,7 +63,7 @@
 						src="../img/aerobase3.png"
 						alt="screenshot of the AeroBASE website news page"
 						draggable="false"
-						sizes="min(560px, 50vw)"
+						sizes="min(560px, 98vw)"
 					/>
 				</div>
 			{/snippet}
@@ -109,7 +109,7 @@
 						src="../img/lucky_appeals.png"
 						alt="screenshot of the Lucky Network Appeals page"
 						draggable="false"
-						sizes="min(560px, 50vw)"
+						sizes="min(560px, 98vw)"
 					/>
 				</div>
 				<div class="col-span-2">
@@ -117,7 +117,7 @@
 						src="../img/lucky_store.png"
 						alt="screenshot of the Lucky Network Store page"
 						draggable="false"
-						sizes="min(560px, 50vw)"
+						sizes="min(560px, 98vw)"
 					/>
 				</div>
 			{/snippet}
