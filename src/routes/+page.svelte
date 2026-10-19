@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>Home - alvaroswdn</title>
+	<title>Alvaro Raditya Soewardono</title>
 </svelte:head>
 
 <HeroSection />
